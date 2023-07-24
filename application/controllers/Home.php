@@ -98,11 +98,11 @@ class Home extends CI_Controller
     public function galeri()
     {
         $data = array(
-            'title'             => 'Detail Berita',
+            'title'             => 'Galeri',
             'title2'            => 'MAN 1 Lampung Tengah',
             // 'berita_terkini'    => $this->m_home->berita_terkini(),
             'galeri'            => $this->m_home->galeri(),
-            'isi'               => 'v_detail_berita'
+            'isi'               => 'v_galeri'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }

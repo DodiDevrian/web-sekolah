@@ -77,7 +77,7 @@ switch (date('m', strtotime($tanggal))) {
                     <div class="blog_title"><?= $berita->judul_berita ?></div>
                     <div class="blog_meta">
                         <ul>
-                            <li class="fa fa-calendar-check-o"> <?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . ' ' . date('H:i', strtotime($tanggal)) ?></li>
+                            <li class="fa fa-calendar-check-o"> <?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></li>
                             <li>By <a href="#">admin</a></li>
                         </ul>
                     </div>
@@ -124,7 +124,7 @@ switch (date('m', strtotime($tanggal))) {
                                     </div>
                                     <div class="latest_content">
                                         <div class="latest_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></div>
-                                        <div class="latest_date"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . ' ' . date('H:i', strtotime($tanggal)) ?></div>
+                                        <div class="latest_date"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></div>
                                     </div>
                                 </div>
                             <?php } ?>
