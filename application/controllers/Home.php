@@ -94,4 +94,16 @@ class Home extends CI_Controller
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }
+
+    public function galeri()
+    {
+        $data = array(
+            'title'             => 'Detail Berita',
+            'title2'            => 'MAN 1 Lampung Tengah',
+            // 'berita_terkini'    => $this->m_home->berita_terkini(),
+            'galeri'            => $this->m_home->galeri(),
+            'isi'               => 'v_detail_berita'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
 }

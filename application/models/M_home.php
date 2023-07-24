@@ -61,4 +61,15 @@ class M_home extends CI_Model
 
         return $this->db->get()->result();
     }
+
+    public function galeri()
+    {
+        $this->db->select('tbl_galeri.*,count(tbl_foto.id_galeri) as jml_foto');
+        $this->db->from('tbl_galeri');
+        $this->db->join('tbl_foto', 'tbl_foto.id_galeri = tbl_galeri.id_galeri', 'left');
+        $this->db->group_by('tbl_galeri.id_galeri');
+        $this->db->order_by('tbl_galeri.id_galeri', 'DESC');
+
+        return $this->db->get()->result();
+    }
 }

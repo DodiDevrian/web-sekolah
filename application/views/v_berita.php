@@ -93,7 +93,7 @@
                                         <div class="blog_post_meta">
                                             <ul>
 
-                                                <li class="fa fa-calendar"> <?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . ' ' . date('H:i', strtotime($tanggal)) ?></li>
+                                                <li class="fa fa-calendar"> <?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></li>
                                             </ul>
                                         </div>
                                         <div class="course_text">
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="latest_content">
                                         <div class="latest_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></div>
-                                        <div class="latest_date"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . ' ' . date('H:i', strtotime($tanggal)) ?></div>
+                                        <div class="latest_date"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></div>
                                     </div>
                                 </div>
                             <?php } ?>
