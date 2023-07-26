@@ -1441,7 +1441,7 @@ section
 .footer_logo_text
 {
 	font-family: 'Roboto Slab', serif;
-	font-size: 36px;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 0.75;
 	color: #FFFFFF;
@@ -1453,7 +1453,7 @@ section
 }
 .footer_logo_text span
 {
-	color: #14bdee;
+	color: #0A875A;
 }
 .footer_title
 {

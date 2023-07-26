@@ -11,7 +11,7 @@
                     </div>
                     <nav class="main_nav_contaner ml-auto">
                         <ul class="main_nav">
-                            <li class="<?php echo menuAktif('home') ?>"><a href="<?= base_url('home') ?>">Home</a></li>
+                            <li><a href="<?= base_url('home') ?>">Home</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Sekolah
@@ -27,7 +27,7 @@
                             </li>
                             <li><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
                             <li><a href="<?= base_url('home/berita') ?>">Berita</a></li>
-                            <li><a href="<?= base_url('home/download') ?>" class="<?php echo menuAktif('home/download') ?>">Download</a></li>
+                            <li><a href="<?= base_url('home/download') ?>">Download</a></li>
                             <li><a href="blog.html">Sarana</a></li>
                             <li><a href="#">Humas</a></li>
                         </ul>

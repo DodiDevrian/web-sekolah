@@ -20,6 +20,14 @@ class Home extends CI_Controller
 
     public function download()
     {
+        function menuAktif($class = '')
+        {
+            $ci = &get_instance();
+
+            if ($ci->router->fetch_class() == $class) {
+                return 'active';
+            }
+        }
         $data = array(
             'title' => 'Download',
             'title2' => 'MAN 1 Lampung Tengah',

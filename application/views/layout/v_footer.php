@@ -18,14 +18,14 @@
 										</a>
 									</div>
 									<div class="footer_about_text">
-										<p>Moto Ikhlas Beramal, Berjaya Dan Bermoral</p>
+										<p>Berkualitas, Kompetitif, Islami, dan Bermartabat</p>
 									</div>
 									<div class="footer_social">
 										<ul>
-											<li><a href="https://www.facebook.com/MansaLamteng/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-											<li><a href="https://www.instagram.com/man1lampungtengah_official/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-											<li><a href="https://www.youtube.com/@man1lampungtengah"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.facebook.com/MansaLamteng/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true" target="_blank"></i></a></li>
+											<li><a href="https://www.instagram.com/man1lampungtengah_official/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.youtube.com/@man1lampungtengah" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -54,15 +54,15 @@
 								<div class="footer_section footer_links">
 									<div class="footer_title">Pages</div>
 									<div class="footer_links_container">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="about.html">About</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="#">Features</a></li>
-											<li><a href="courses.html">Courses</a></li>
-											<li><a href="#">Events</a></li>
-											<li><a href="#">Gallery</a></li>
-											<li><a href="#">FAQs</a></li>
+										<ul class="row">
+											<li class="col-6"><a href="index.html">Home</a></li>
+											<li class="col-6"><a href="about.html">About</a></li>
+											<li class="col-6"><a href="contact.html">Contact</a></li>
+											<li class="col-6"><a href="#">Features</a></li>
+											<li class="col-6"><a href="courses.html">Courses</a></li>
+											<li class="col-6"><a href="#">Events</a></li>
+											<li class="col-6"><a href="#">Gallery</a></li>
+											<li class="col-6"><a href="#">FAQs</a></li>
 										</ul>
 									</div>
 								</div>
@@ -92,14 +92,8 @@
 						<div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							Copyright &copy; <script>
 								document.write(new Date().getFullYear());
-							</script> Dodi Devrian Andrianto | MAN 1 Lampung Tengah <i class="fa fa-heart-o" aria-hidden="true"></i>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-						<div class="ml-lg-auto cr_links">
-							<ul class="cr_list">
-								<li><a href="#">Copyright notification</a></li>
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
+							</script> MAN 1 Lampung Tengah | by Dodi Devrian Andrianto </i>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</div>
 					</div>
 				</div>
