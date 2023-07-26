@@ -90,4 +90,32 @@ class M_home extends CI_Model
 
         return $this->db->get()->row();
     }
+
+    public function kelas()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_kelas');
+        $this->db->order_by('id_kelas', 'DESC');
+
+        return $this->db->get()->result();
+    }
+
+    public function nama_kelas($id_kelas)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_kelas');
+        $this->db->where('id_kelas', $id_kelas);
+
+        return $this->db->get()->row();
+    }
+
+    public function siswa()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_siswa');
+        $this->db->join('tbl_kelas', 'tbl_kelas.id_kelas = tbl_siswa.id_kelas', 'left');
+        $this->db->order_by('id_siswa', 'DESC');
+
+        return $this->db->get()->result();
+    }
 }

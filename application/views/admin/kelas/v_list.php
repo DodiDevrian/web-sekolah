@@ -18,6 +18,7 @@
                         <th>No</th>
                         <th>Kelas</th>
                         <th>Angkatan</th>
+                        <th>Slogan</th>
                         <th>Logo</th>
                         <th>Action</th>
                     </tr>
@@ -29,6 +30,7 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->kelas; ?></td>
                             <td><?= $value->angkatan; ?></td>
+                            <td><?= $value->moto; ?></td>
                             <td><img src="<?= base_url('logo/') . $value->logo ?>" width="50"></td>
                             <td>
                                 <a href="<?= base_url('kelas/siswa/' . $value->id_kelas) ?>" class="btn btn-primary btn-sm"><i class="fa fa-users"></i> Lihat Siswa</a>

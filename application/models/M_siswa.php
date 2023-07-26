@@ -17,6 +17,7 @@ class M_siswa extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_siswa');
+        $this->db->join('tbl_kelas', 'tbl_kelas.id_kelas = tbl_siswa.id_kelas', 'left');
         $this->db->where('id_siswa', $id_siswa);
         return $this->db->get()->row();
     }

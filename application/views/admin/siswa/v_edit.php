@@ -113,9 +113,14 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Angkatan</label>
-                        <input class="form-control" type="text" name="angkatan" value="<?= $siswa->angkatan ?>" placeholder="Masukkan Angkatan" required>
+                    <div class="form-group search_select_box">
+                        <label>Kelas</label>
+                        <select name="angkatan" class="form-control" data-live-search="true">
+                            <option value="<?= $siswa->angkatan ?>"><?= $siswa->angkatan ?></option>
+                            <?php foreach ($angkatan as $key => $value) { ?>
+                                <option value="<?= $value->angkatan ?>"><?= $value->angkatan ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
             </div>

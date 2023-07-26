@@ -73,52 +73,20 @@
                 <div class="col-md-6">
                     <div class="form-group search_select_box">
                         <label>Kelas</label>
-                        <select name="kelas" class="form-control" data-live-search="true">
+                        <select name="id_kelas" class="form-control" data-live-search="true">
                             <option value="" disabled selected>--Pilih Kelas--</option>
-                            <option value="10 IPA 1">10 IPA 1</option>
-                            <option value="10 IPA 2">10 IPA 2</option>
-                            <option value="10 IPA 3">10 IPA 3</option>
-                            <option value="10 IPA 4">10 IPA 4</option>
-                            <option value="10 IPA 5">10 IPA 5</option>
-                            <option value="10 IPS 1">10 IPS 1</option>
-                            <option value="10 IPS 2">10 IPS 2</option>
-                            <option value="10 IPS 3">10 IPS 3</option>
-                            <option value="10 IPS 4">10 IPS 4</option>
-                            <option value="10 IPS 5">10 IPS 5</option>
-                            <option value="11 IPA 1">11 IPA 1</option>
-                            <option value="11 IPA 2">11 IPA 2</option>
-                            <option value="11 IPA 3">11 IPA 3</option>
-                            <option value="11 IPA 4">11 IPA 4</option>
-                            <option value="11 IPA 5">11 IPA 5</option>
-                            <option value="11 IPS 1">11 IPS 1</option>
-                            <option value="11 IPS 2">11 IPS 2</option>
-                            <option value="11 IPS 3">11 IPS 3</option>
-                            <option value="11 IPS 4">11 IPS 4</option>
-                            <option value="11 IPS 5">11 IPS 5</option>
-                            <option value="12 IPA 1">12 IPA 1</option>
-                            <option value="12 IPA 2">12 IPA 2</option>
-                            <option value="12 IPA 3">12 IPA 3</option>
-                            <option value="12 IPA 4">12 IPA 4</option>
-                            <option value="12 IPA 5">12 IPA 5</option>
-                            <option value="12 IPS 1">12 IPS 1</option>
-                            <option value="12 IPS 2">12 IPS 2</option>
-                            <option value="12 IPS 3">12 IPS 3</option>
-                            <option value="12 IPS 4">12 IPS 4</option>
-                            <option value="12 IPS 5">12 IPS 5</option>
+                            <?php foreach ($kelas as $key => $value) { ?>
+                                <option value="<?= $value->id_kelas ?>"><?= $value->kelas ?> Angkatan <?= $value->angkatan ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Angkatan</label>
-                        <input class="form-control" type="text" name="angkatan" placeholder="Masukkan Angkatan" required>
+                        <label>Foto Siswa</label>
+                        <input class="form-control" type="file" name="foto_siswa" placeholder="Masukkan Tempat Lahir" required>
                     </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label>Foto Siswa</label>
-                <input class="form-control" type="file" name="foto_siswa" placeholder="Masukkan Tempat Lahir" required>
             </div>
 
             <div class="form-group text-center">

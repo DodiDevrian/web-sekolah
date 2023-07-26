@@ -23,6 +23,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="../datepicker/css/datepicker.css">
+<style>
+    .datepicker {
+        z-index: 1151;
+    }
+</style>
 
 <div class="col-lg-12">
     <div class="panel panel-primary">
@@ -36,7 +42,32 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' . $error_upload . '</div>';
             }
 
-            echo form_open_multipart('kelas/add'); ?>
+            echo form_open_multipart('siswa/add');
+            ?>
+
+            <div class="form-group">
+                <label>NIS</label>
+                <input class="form-control" type="text" name="nis" placeholder="Masukkan NIS" required>
+            </div>
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input class="form-control" type="text" name="nama_siswa" placeholder="Masukkan Nama Lengkap" required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tempat Lahir</label>
+                        <input class="form-control" type="text" name="tempat_lahir" placeholder="Masukkan Tempat Lahir" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input id="tanggal" class="form-control" type="text" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" required>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-md-6">
@@ -78,20 +109,21 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Angkatan</label>
-                        <input class="form-control" type="text" name="angkatan" placeholder="Masukkan Angkatan" required>
+                    <div class="form-group search_select_box">
+                        <label>Kelas</label>
+                        <select name="angkatan" class="form-control" data-live-search="true">
+                            <option value="" disabled selected>--Pilih Angkattan--</option>
+                            <?php foreach ($angkatan as $key => $value) { ?>
+                                <option value="<?= $value->id_angkatan ?>"><?= $value->angkatan ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label>Slogan Angkatan</label>
-                <input class="form-control" type="text" name="moto" placeholder="Masukkan Moto Angkatan" required>
-            </div>
 
             <div class="form-group">
-                <label>Logo</label>
-                <input class="form-control" type="file" name="logo" placeholder="Masukkan Tempat Lahir" required>
+                <label>Foto Siswa</label>
+                <input class="form-control" type="file" name="foto_siswa" placeholder="Masukkan Tempat Lahir" required>
             </div>
 
             <div class="form-group text-center">
@@ -120,7 +152,32 @@
 <!-- Custom Theme JavaScript -->
 <script src="../template/back-end/js/startmin.js"></script>
 
+<!-- DataTables JavaScript -->
+<script src="../template/back-end/js/dataTables/jquery.dataTables.min.js"></script>
+<script src="../template/back-end/js/dataTables/dataTables.bootstrap.min.js"></script>
+
+<script src="../datepicker/js/bootstrap-modal.js"></script>
+<script src="../datepicker/js/bootstrap-transition.js"></script>
+<script src="../datepicker/js/bootstrap-datepicker.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(function() {
+        $("#tanggal").datepicker({
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
 
 <script>
     $(document).ready(function() {

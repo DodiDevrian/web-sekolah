@@ -86,6 +86,11 @@
             </div>
 
             <div class="form-group">
+                <label>Slogan Angkatan</label>
+                <input class="form-control" type="text" name="moto" value="<?= $kelas->moto ?>" placeholder="Masukkan Moto Angkatan" required>
+            </div>
+
+            <div class="form-group">
                 <label>Logo</label>
                 <input class="form-control" type="file" name="logo" placeholder="Masukkan Tempat Lahir">
             </div>

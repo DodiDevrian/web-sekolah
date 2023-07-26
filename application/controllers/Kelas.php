@@ -7,6 +7,7 @@ class Kelas extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_kelas');
+        // $this->load->model('m_siswa');
     }
 
     public function index()
@@ -25,6 +26,7 @@ class Kelas extends CI_Controller
     {
         $this->form_validation->set_rules('kelas', 'Kelas', 'required');
         $this->form_validation->set_rules('angkatan', 'Angkatan', 'required');
+        $this->form_validation->set_rules('moto', 'Moto', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './logo/';
@@ -50,6 +52,7 @@ class Kelas extends CI_Controller
                 $data = array(
                     'kelas'           => $this->input->post('kelas'),
                     'angkatan'     => $this->input->post('angkatan'),
+                    'moto'     => $this->input->post('moto'),
                     'logo'   => $upload_data['uploads']['file_name']
                 );
 
@@ -71,6 +74,7 @@ class Kelas extends CI_Controller
     {
         $this->form_validation->set_rules('kelas', 'Kelas', 'required');
         $this->form_validation->set_rules('angkatan', 'Angkatan', 'required');
+        $this->form_validation->set_rules('moto', 'Moto', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './logo/';
@@ -104,6 +108,7 @@ class Kelas extends CI_Controller
                     'id_kelas'       => $id_kelas,
                     'kelas'           => $this->input->post('kelas'),
                     'angkatan'     => $this->input->post('angkatan'),
+                    'moto'     => $this->input->post('moto'),
                     'logo'     => $upload_data['uploads']['file_name']
                 );
 
@@ -119,6 +124,7 @@ class Kelas extends CI_Controller
             $data = array(
                 'id_kelas'       => $id_kelas,
                 'kelas'           => $this->input->post('kelas'),
+                'moto'     => $this->input->post('moto'),
                 'angkatan'     => $this->input->post('angkatan')
             );
 
@@ -159,6 +165,61 @@ class Kelas extends CI_Controller
             'id'     => $this->uri->segment(3),
             'isi'    => 'admin/kelas/v_siswa'
 
+        );
+        $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+    }
+
+    public function add_siswa()
+    {
+        $this->form_validation->set_rules('nis', 'NIS', 'required');
+        $this->form_validation->set_rules('nama_siswa', 'Nama Lengkap', 'required');
+        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
+        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
+        $this->form_validation->set_rules('kelas', 'Kelas', 'required');
+        $this->form_validation->set_rules('angkatan', 'Angkatan', 'required');
+
+        if ($this->form_validation->run() == TRUE) {
+            $config['upload_path']      = './foto_siswa/';
+            $config['allowed_types']    = 'gif|jpg|png|jpeg';
+            $config['max_size']         = 2000;
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('foto_siswa')) {
+
+                $data = array(
+                    'title'     => 'Siswa',
+                    'title2'    => 'Tambah Data Siswa',
+                    'error'     => $this->upload->display_errors(),
+                    'angkatan'  => $this->m_kelas->lists(),
+                    'isi'       => 'admin/kelas/v_add_siswa'
+                );
+                $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+            } else {
+                $upload_data = array('uploads' => $this->upload->data());
+                $config['image_library'] = 'gd2';
+                $config['source_image'] = './foto_siswa/' . $upload_data['uploads']['file_name'];
+                $this->load->library('image_lib', $config);
+
+                $data = array(
+                    'nis'           => $this->input->post('nis'),
+                    'nama_siswa'     => $this->input->post('nama_siswa'),
+                    'tempat_lahir'  => $this->input->post('tempat_lahir'),
+                    'tgl_lahir'     => $this->input->post('tgl_lahir'),
+                    'kelas'         => $this->input->post('kelas'),
+                    'angkatan'      => $this->input->post('angkatan'),
+                    'foto_siswa'   => $upload_data['uploads']['file_name']
+                );
+
+                $this->m_siswa->add($data);
+                $this->session->flashdata('pesan', 'Data Siswa Berhasil Ditambahkan!');
+                redirect('kelas/siswa');
+            }
+        }
+
+        $data = array(
+            'title'     => 'Siswa',
+            'title2'     => 'Tambah Data Siswa',
+            'isi'       => 'admin/siswa/v_add'
         );
         $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }

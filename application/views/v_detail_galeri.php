@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/about.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/about_responsive.css">
 
+
 <div class="home">
     <div class="breadcrumbs_container">
         <div class="container">
@@ -39,7 +40,11 @@
             <?php foreach ($galeri as $key => $value) { ?>
                 <div class="col-lg-4 about_col about_col_left" style="margin-top: 25px;">
                     <div class="about_item">
-                        <div class="about_item_image"><img src="<?= base_url('foto/') . $value->foto ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></div>
+                        <div class="about_item_image">
+                            <a href="<?= base_url('foto/') . $value->foto ?>" data-lightbox="roadtrip" data-title="<?= $value->ket ?>">
+                                <img src="<?= base_url('foto/') . $value->foto ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;">
+                            </a>
+                        </div>
                         <div class="text-center">
                             <p><?= $value->ket ?></p>
                         </div>

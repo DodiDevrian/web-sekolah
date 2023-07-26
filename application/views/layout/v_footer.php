@@ -123,6 +123,8 @@
 
 	<script src="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.js"></script>
 
+	<script src="<?= base_url() ?>assets/js/lightbox.js"></script>
+
 	<script>
 		$(document).ready(function() {
 			$('#myTable').DataTable();

@@ -19,5 +19,6 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/responsive.css">
 
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/lightbox.css">
 
 </head>

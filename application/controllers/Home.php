@@ -45,7 +45,7 @@ class Home extends CI_Controller
             'guru' => $this->m_home->guru(),
             'isi'   => 'v_guru'
         );
-        $this->load->view('layout/v_wrapper2', $data, FALSE);
+        $this->load->view('layout/v_wrapper', $data, FALSE);
     }
 
     public function berita()
@@ -123,6 +123,29 @@ class Home extends CI_Controller
             'galeri'          => $this->m_home->detail_galeri($id_galeri),
             'nama_galeri'     => $this->m_home->nama_galeri($id_galeri),
             'isi'             => 'v_detail_galeri'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
+
+    public function kelas()
+    {
+        $data = array(
+            'title' => 'Kelas',
+            'title2' => 'MAN 1 Lampung Tengah',
+            'kelas' => $this->m_home->kelas(),
+            'isi'   => 'v_kelas'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
+
+    public function siswa($id_kelas)
+    {
+        $data = array(
+            'title' => 'Siswa',
+            'title2' => 'MAN 1 Lampung Tengah',
+            'kelas' => $this->m_home->nama_kelas($id_kelas),
+            'siswa' => $this->m_home->siswa(),
+            'isi'   => 'v_siswa'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }

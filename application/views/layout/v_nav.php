@@ -19,7 +19,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Visi Misi</a>
                                     <a class="dropdown-item" href="<?= base_url('home/guru') ?>">Guru</a>
-                                    <a class="dropdown-item" href="#">Siswa</a>
+                                    <a class="dropdown-item" href="<?= base_url('home/kelas') ?>">Siswa</a>
                                     <a class="dropdown-item" href="#">Kurikulum</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
