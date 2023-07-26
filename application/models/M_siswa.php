@@ -7,6 +7,7 @@ class M_siswa extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_siswa');
+        $this->db->join('tbl_kelas', 'tbl_kelas.id_kelas = tbl_siswa.id_kelas', 'left');
         $this->db->order_by('id_siswa', 'DESC');
 
         return $this->db->get()->result();

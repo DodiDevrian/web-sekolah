@@ -1,3 +1,22 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+<link href="<?= base_url() ?>/template/back-end/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- MetisMenu CSS -->
+<link href="<?= base_url() ?>/template/back-end/css/metisMenu.min.css" rel="stylesheet">
+
+<!-- DataTables CSS -->
+<link href="<?= base_url() ?>/template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+<!-- DataTables Responsive CSS -->
+<link href="<?= base_url() ?>/template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="<?= base_url() ?>/template/back-end/css/startmin.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="<?= base_url() ?>/template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading text-right">

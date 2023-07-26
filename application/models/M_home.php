@@ -72,4 +72,22 @@ class M_home extends CI_Model
 
         return $this->db->get()->result();
     }
+
+    public function detail_galeri($id_galeri)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_foto');
+        $this->db->where('id_galeri', $id_galeri);
+        $this->db->order_by('tbl_foto.id_foto', 'DESC');
+
+        return $this->db->get()->result();
+    }
+    public function nama_galeri($id_galeri)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_galeri');
+        $this->db->where('id_galeri', $id_galeri);
+
+        return $this->db->get()->row();
+    }
 }
