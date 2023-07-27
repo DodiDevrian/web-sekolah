@@ -13,6 +13,7 @@ class Home extends CI_Controller
         $data = array(
             'title' => 'MAN 1 Lampung Tengah',
             'title2' => 'MAN 1 Lampung Tengah Official',
+            'slider_berita' => $this->m_home->slider_berita(),
             'isi'   => 'v_home'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -34,7 +35,7 @@ class Home extends CI_Controller
             'downloads' => $this->m_home->downloads(),
             'isi'   => 'v_download'
         );
-        $this->load->view('layout/v_wrapper2', $data, FALSE);
+        $this->load->view('layout/v_wrapper', $data, FALSE);
     }
 
     public function guru()
@@ -145,6 +146,7 @@ class Home extends CI_Controller
             'title2' => 'MAN 1 Lampung Tengah',
             'kelas' => $this->m_home->nama_kelas($id_kelas),
             'siswa' => $this->m_home->siswa(),
+            'id'     => $this->uri->segment(3),
             'isi'   => 'v_siswa'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);

@@ -28,7 +28,7 @@
                             <li><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
                             <li><a href="<?= base_url('home/berita') ?>">Berita</a></li>
                             <li><a href="<?= base_url('home/download') ?>">Download</a></li>
-                            <li><a href="blog.html">Sarana</a></li>
+                            <li><a href="#">Sarana</a></li>
                             <li><a href="#">Humas</a></li>
                         </ul>
 
@@ -44,7 +44,7 @@
 </div>
 
 <!-- Header Search Panel -->
-<div class="header_search_container">
+<!-- <div class="header_search_container">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 </header>
 
 <!-- Menu -->

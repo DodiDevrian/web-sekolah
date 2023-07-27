@@ -5,104 +5,67 @@
         <!-- Home Slider -->
         <div class="owl-carousel owl-theme home_slider">
 
-            <!-- Home Slider Item -->
-            <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(<?php base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
-                <div class="home_slider_content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <div class="home_slider_title">The Premium System Education</div>
-                                <div class="home_slider_subtitle">Future Of Education Technology</div>
-                                <div class="home_slider_form_container">
-                                    <form action="#" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-start">
-                                            <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Category Courses</option>
-                                                <option>Category</option>
-                                                <option>Category</option>
-                                            </select>
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Select Price Type</option>
-                                                <option>Price Type</option>
-                                                <option>Price Type</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="home_search_button">search</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($slider_berita as $key => $value) {
+                $tanggal = $value->tgl_berita;
+                switch (date('m', strtotime($tanggal))) {
+                    case '01':
+                        $bulan = 'Januari';
+                        break;
+                    case '02':
+                        $bulan = 'Februari';
+                        break;
+                    case '03':
+                        $bulan = 'Maret';
+                        break;
+                    case '04':
+                        $bulan = 'April';
+                        break;
+                    case '05':
+                        $bulan = 'Mei';
+                        break;
+                    case '06':
+                        $bulan = 'Juni';
+                        break;
+                    case '07':
+                        $bulan = 'Juli';
+                        break;
+                    case '08':
+                        $bulan = 'Agustus';
+                        break;
+                    case '09':
+                        $bulan = 'September';
+                        break;
+                    case '10':
+                        $bulan = 'Oktober';
+                        break;
+                    case '11':
+                        $bulan = 'November';
+                        break;
+                    case '12':
+                        $bulan = 'Desember';
+                        break;
 
-            <!-- Home Slider Item -->
-            <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(<?php base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
-                <div class="home_slider_content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <div class="home_slider_title">The Premium System Education</div>
-                                <div class="home_slider_subtitle">Future Of Education Technology</div>
-                                <div class="home_slider_form_container">
-                                    <form action="#" id="home_search_form_2" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-start">
-                                            <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Category Courses</option>
-                                                <option>Category</option>
-                                                <option>Category</option>
-                                            </select>
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Select Price Type</option>
-                                                <option>Price Type</option>
-                                                <option>Price Type</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="home_search_button">search</button>
-                                    </form>
+                    default:
+                        $bulan = 'Bulan Tidak Diketahi';
+                        break;
+                }
+            ?>
+                <div class="owl-item">
+                    <div class="home_slider_background" style="background-image:url(<?= base_url('gambar_berita/' . $value->gambar_berita) ?>"></div>
+                    <div class="home_slider_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center" style="background: rgba(255,255,255,0.6); border-radius: 10px;">
+                                    <div><a href="" class="home_slider_title"><?= $value->judul_berita ?></a></div>
+                                    <div style="margin-top: 20px; font-family: 'Roboto Slab', serif;" class="home_slider_subtitle"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></div>
+                                    <div class="home_slider_form_container">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Home Slider Item -->
-            <div class="owl-item">
-                <div class="home_slider_background" style="background-image:url(<?php base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
-                <div class="home_slider_content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <div class="home_slider_title">The Premium System Education</div>
-                                <div class="home_slider_subtitle">Future Of Education Technology</div>
-                                <div class="home_slider_form_container">
-                                    <form action="#" id="home_search_form_3" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-start">
-                                            <input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Category Courses</option>
-                                                <option>Category</option>
-                                                <option>Category</option>
-                                            </select>
-                                            <select class="dropdown_item_select home_search_input">
-                                                <option>Select Price Type</option>
-                                                <option>Price Type</option>
-                                                <option>Price Type</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="home_search_button">search</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>
@@ -120,7 +83,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">Welcome To Unicat E-Learning</h2>
+                    <h2 class="section_title">Selamat Datang Di Website MAN 1 Lampung Tengah</h2>
                     <div class="section_subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
                     </div>
@@ -132,8 +95,8 @@
             <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>template/front-end/images/icon_1.png" alt=""></div>
-                    <h3 class="feature_title">The Experts</h3>
+                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon1.png" alt="" width="80"></div>
+                    <h3 class="feature_title">Berkualitas</h3>
                     <div class="feature_text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
@@ -143,8 +106,8 @@
             <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>template/front-end/images/icon_2.png" alt=""></div>
-                    <h3 class="feature_title">Book & Library</h3>
+                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon2.png" alt="" width="80"></div>
+                    <h3 class="feature_title">Kompetitif</h3>
                     <div class="feature_text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
@@ -154,8 +117,8 @@
             <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>template/front-end/images/icon_3.png" alt=""></div>
-                    <h3 class="feature_title">Best Courses</h3>
+                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon3.png" alt="" width="80"></div>
+                    <h3 class="feature_title">Islami</h3>
                     <div class="feature_text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
@@ -165,8 +128,8 @@
             <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>template/front-end/images/icon_4.png" alt=""></div>
-                    <h3 class="feature_title">Award & Reward</h3>
+                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon4.png" alt="" width="80"></div>
+                    <h3 class="feature_title">Bermartabat</h3>
                     <div class="feature_text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
