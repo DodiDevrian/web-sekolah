@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" href="<?= base_url() ?>assets/images/logo-man.png">
+
     <title><?= $title ?> - MAN 1 Lampung Tengah</title>
 
     <!-- Bootstrap Core CSS -->

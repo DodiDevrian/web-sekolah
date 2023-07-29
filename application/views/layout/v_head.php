@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Dodi Devrian project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?= base_url() ?>assets/images/logo-man.png">
 
     <title><?= $title ?> - <?= $title2 ?></title>
 
