@@ -62,7 +62,7 @@
 											<li class="col-6"><a href="courses.html">Courses</a></li>
 											<li class="col-6"><a href="#">Events</a></li>
 											<li class="col-6"><a href="#">Gallery</a></li>
-											<li class="col-6"><a href="#">FAQs</a></li>
+											<li class="col-6"><a href="<?= base_url('login') ?>">Login</a></li>
 										</ul>
 									</div>
 								</div>

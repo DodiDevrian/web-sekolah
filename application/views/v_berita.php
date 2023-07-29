@@ -82,12 +82,10 @@
                                 default:
                                     $bulan = 'Bulan Tidak Diketahi';
                                     break;
-                            }
-
-                            ?>
+                            } ?>
                             <div class="col-lg-6 course_col">
                                 <div class="course">
-                                    <div class="course_image"><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt=""></div>
+                                    <div class="course_image"><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></div>
                                     <div class="course_body">
                                         <h3 class="course_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></h3>
                                         <div class="blog_post_meta">
@@ -135,7 +133,7 @@
                             <?php foreach ($berita_terkini as $key => $value) { ?>
                                 <div class="latest d-flex flex-row align-items-start justify-content-start">
                                     <div class="latest_image">
-                                        <div><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt=""></div>
+                                        <div><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 60px; object-fit: cover; object-position: 20% 10%;"></div>
                                     </div>
                                     <div class="latest_content">
                                         <div class="latest_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></div>

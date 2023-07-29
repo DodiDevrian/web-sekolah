@@ -25,10 +25,14 @@
                                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                             <div>manterbangi@kemenag.go.id</div>
                                         </li>
+                                        <li>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <div>Terbanggi Besar</div>
+                                        </li>
                                     </ul>
-                                    <div class="top_bar_login ml-auto">
-                                        <div class="login_button"><a href="<?= base_url('login') ?>">Login</a></div>
-                                    </div>
+                                    <!-- <div class="top_bar_login ml-auto">
+                                        <div class="login_button"><a href="#">Login</a></div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

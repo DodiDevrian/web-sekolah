@@ -14,6 +14,9 @@ class Home extends CI_Controller
             'title' => 'MAN 1 Lampung Tengah',
             'title2' => 'MAN 1 Lampung Tengah Official',
             'slider_berita' => $this->m_home->slider_berita(),
+            'berita_terakhir' => $this->m_home->berita_terakhir(),
+            'home_berita_terkini' => $this->m_home->home_berita_terkini(),
+            'home_galeri' => $this->m_home->home_galeri(),
             'isi'   => 'v_home'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -148,6 +151,16 @@ class Home extends CI_Controller
             'siswa' => $this->m_home->siswa(),
             'id'     => $this->uri->segment(3),
             'isi'   => 'v_siswa'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
+
+    public function about()
+    {
+        $data = array(
+            'title' => 'Hubungi',
+            'title2' => 'MAN 1 Lampung Tengah',
+            'isi'   => 'v_about'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }

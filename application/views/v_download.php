@@ -1,5 +1,16 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/contact.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/contact_responsive.css">
+<style>
+    .dataTables_wrapper .dataTables_filter input {
+        border: 1px solid #aaa;
+        width: 300px;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: transparent;
+        color: inherit;
+        margin-left: 3px;
+    }
+</style>
 <!-- Home -->
 
 <div class="home">

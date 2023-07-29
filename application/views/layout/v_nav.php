@@ -21,6 +21,7 @@
                                     <a class="dropdown-item" href="<?= base_url('home/guru') ?>">Guru</a>
                                     <a class="dropdown-item" href="<?= base_url('home/kelas') ?>">Siswa</a>
                                     <a class="dropdown-item" href="#">Kurikulum</a>
+                                    <a class="dropdown-item" href="#">Sarana</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
@@ -28,8 +29,7 @@
                             <li><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
                             <li><a href="<?= base_url('home/berita') ?>">Berita</a></li>
                             <li><a href="<?= base_url('home/download') ?>">Download</a></li>
-                            <li><a href="#">Sarana</a></li>
-                            <li><a href="#">Humas</a></li>
+                            <li><a href="<?= base_url('home/about') ?>">Hubungi Kami</a></li>
                         </ul>
 
                         <div class="hamburger menu_mm">

@@ -62,6 +62,27 @@ class M_home extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function berita_terakhir()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'DESC');
+        $this->db->limit(1);
+
+        return $this->db->get()->result();
+    }
+    public function home_berita_terkini()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'DESC');
+        $this->db->limit(4);
+
+        return $this->db->get()->result();
+    }
+
     public function slider_berita()
     {
         $this->db->select('*');
@@ -80,6 +101,18 @@ class M_home extends CI_Model
         $this->db->join('tbl_foto', 'tbl_foto.id_galeri = tbl_galeri.id_galeri', 'left');
         $this->db->group_by('tbl_galeri.id_galeri');
         $this->db->order_by('tbl_galeri.id_galeri', 'DESC');
+
+        return $this->db->get()->result();
+    }
+
+    public function home_galeri()
+    {
+        $this->db->select('tbl_galeri.*,count(tbl_foto.id_galeri) as jml_foto');
+        $this->db->from('tbl_galeri');
+        $this->db->join('tbl_foto', 'tbl_foto.id_galeri = tbl_galeri.id_galeri', 'left');
+        $this->db->group_by('tbl_galeri.id_galeri');
+        $this->db->order_by('tbl_galeri.id_galeri', 'DESC');
+        $this->db->limit(3);
 
         return $this->db->get()->result();
     }

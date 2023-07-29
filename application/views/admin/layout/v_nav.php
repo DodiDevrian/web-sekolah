@@ -21,6 +21,9 @@
                 <a href="<?= base_url('pengumuman') ?>"><i class="fa fa-bullhorn fa-fw"></i> Pengumuman</a>
             </li>
             <li>
+                <a href="<?= base_url('events') ?>"><i class="fa fa-files-o fa-fw"></i> Event</a>
+            </li>
+            <li>
                 <a href="<?= base_url('berita') ?>"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
             </li>
             <li>

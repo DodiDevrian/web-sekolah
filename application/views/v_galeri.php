@@ -42,7 +42,7 @@
                         <div class="about_item_image"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="<?= base_url('sampul/') . $value->sampul ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></a></div>
                         <div class="about_item_title"><a href="#"><?= $value->nama_galeri ?></a></div>
                         <div class="">
-                            <p>Jumlah : <?= $value->jml_foto ?></p>
+                            <p>Jumlah : <?= $value->jml_foto ?> Foto</p>
                         </div>
                     </div>
                 </div>

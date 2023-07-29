@@ -1,1 +1,1 @@
-<h2> Isi Dashboard</h2>
+<h3>Selamat Datang Di Halaman Admin Websita MAN 1 Lampung Tengah</h3>
