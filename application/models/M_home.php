@@ -162,4 +162,22 @@ class M_home extends CI_Model
 
         return $this->db->get()->result();
     }
+
+    public function events()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_event');
+        $this->db->order_by('id_event', 'DESC');
+
+        return $this->db->get()->result();
+    }
+
+    public function pegawai()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_pegawai');
+        $this->db->order_by('id_pegawai', 'DESC');
+
+        return $this->db->get()->result();
+    }
 }

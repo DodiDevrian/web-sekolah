@@ -1,3 +1,8 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 <!-- Home -->
 <div class="home">
     <div class="home_slider_container">
@@ -76,7 +81,7 @@
     <div class="home_slider_nav home_slider_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
 </div>
 
-<!-- Features -->
+<!-- Slogan -->
 
 <div class="features">
     <div class="container">
@@ -91,8 +96,6 @@
             </div>
         </div>
         <div class="row features_row">
-
-            <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon1.png" alt="" width="80"></div>
@@ -103,7 +106,6 @@
                 </div>
             </div>
 
-            <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon2.png" alt="" width="80"></div>
@@ -114,7 +116,6 @@
                 </div>
             </div>
 
-            <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon3.png" alt="" width="80"></div>
@@ -125,7 +126,6 @@
                 </div>
             </div>
 
-            <!-- Features Item -->
             <div class="col-lg-3 feature_col">
                 <div class="feature text-center trans_400">
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon4.png" alt="" width="80"></div>
@@ -140,7 +140,7 @@
     </div>
 </div>
 
-<!-- Popular Courses -->
+<!-- Galei MAN -->
 
 <div class="courses">
     <div class="section_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/courses_background.jpg" data-speed="0.8"></div>
@@ -186,7 +186,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">Upcoming events</h2>
+                    <h2 class="section_title">Events</h2>
                     <div class="section_subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
                     </div>
@@ -196,85 +196,81 @@
         <div class="row events_row">
 
             <!-- Event -->
-            <div class="col-lg-4 event_col">
-                <div class="event event_left">
-                    <div class="event_image"><img src="<?php base_url() ?>template/front-end/images/event_1.jpg" alt=""></div>
-                    <div class="event_body d-flex flex-row align-items-start justify-content-start">
-                        <div class="event_date">
-                            <div class="d-flex flex-column align-items-center justify-content-center trans_200">
-                                <div class="event_day trans_200">21</div>
-                                <div class="event_month trans_200">Aug</div>
-                            </div>
-                        </div>
-                        <div class="event_content">
-                            <div class="event_title"><a href="#">Which Country Handles Student Debt?</a></div>
-                            <div class="event_info_container">
-                                <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>15.00 - 19.30</span></div>
-                                <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
-                                <div class="event_text">
-                                    <p>Policy analysts generally agree on a need for reform, but not on which path...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($events as $key => $value) { ?>
+                <?php
+                $tanggal = $value->tgl_event;
+                switch (date('m', strtotime($tanggal))) {
+                    case '01':
+                        $bulan = 'Jan';
+                        break;
+                    case '02':
+                        $bulan = 'Feb';
+                        break;
+                    case '03':
+                        $bulan = 'Mar';
+                        break;
+                    case '04':
+                        $bulan = 'Apr';
+                        break;
+                    case '05':
+                        $bulan = 'Mei';
+                        break;
+                    case '06':
+                        $bulan = 'Jun';
+                        break;
+                    case '07':
+                        $bulan = 'Jul';
+                        break;
+                    case '08':
+                        $bulan = 'Aug';
+                        break;
+                    case '09':
+                        $bulan = 'Sep';
+                        break;
+                    case '10':
+                        $bulan = 'Okt';
+                        break;
+                    case '11':
+                        $bulan = 'Nov';
+                        break;
+                    case '12':
+                        $bulan = 'Des';
+                        break;
 
-            <!-- Event -->
-            <div class="col-lg-4 event_col">
-                <div class="event event_mid">
-                    <div class="event_image"><img src="<?php base_url() ?>template/front-end/images/event_2.jpg" alt=""></div>
-                    <div class="event_body d-flex flex-row align-items-start justify-content-start">
-                        <div class="event_date">
-                            <div class="d-flex flex-column align-items-center justify-content-center trans_200">
-                                <div class="event_day trans_200">27</div>
-                                <div class="event_month trans_200">Aug</div>
+                    default:
+                        $bulan = 'Bulan Tidak Diketahi';
+                        break;
+                } ?>
+                <div class="col-lg-4 event_col">
+                    <div class="event event_left">
+                        <div class="event_image"><img src="<?= base_url('foto_event/') . $value->foto_event ?>" alt="" style="width: 100%; height: 223px; object-fit: cover; object-position: 20% 10%;"></div>
+                        <div class="event_body d-flex flex-row align-items-start justify-content-start">
+                            <div class="event_date">
+                                <div class="d-flex flex-column align-items-center justify-content-center trans_200">
+                                    <div class="event_day trans_200"><?= date('d', strtotime($tanggal)) ?></div>
+                                    <div class="event_month trans_200"><?= $bulan ?></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="event_content">
-                            <div class="event_title"><a href="#">Repaying your student loans (Winter 2017-2018)</a></div>
-                            <div class="event_info_container">
-                                <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>09.00 - 17.30</span></div>
-                                <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 Brooklyn City</span></div>
-                                <div class="event_text">
-                                    <p>This Consumer Action News issue covers topics now being debated before...</p>
+                            <div class="event_content">
+                                <div class="event_title"><a href="#"><?= $value->nama_event ?></a></div>
+                                <div class="event_info_container">
+                                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>15.00 - 19.30</span></div>
+                                    <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
+                                    <div class="event_text">
+                                        <p>Policy analysts generally agree on a need for reform, but not on which path...</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Event -->
-            <div class="col-lg-4 event_col">
-                <div class="event event_right">
-                    <div class="event_image"><img src="<?php base_url() ?>template/front-end/images/event_3.jpg" alt=""></div>
-                    <div class="event_body d-flex flex-row align-items-start justify-content-start">
-                        <div class="event_date">
-                            <div class="d-flex flex-column align-items-center justify-content-center trans_200">
-                                <div class="event_day trans_200">01</div>
-                                <div class="event_month trans_200">Sep</div>
-                            </div>
-                        </div>
-                        <div class="event_content">
-                            <div class="event_title"><a href="#">Alternative data and financial inclusion</a></div>
-                            <div class="event_info_container">
-                                <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>13.00 - 18.30</span></div>
-                                <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
-                                <div class="event_text">
-                                    <p>Policy analysts generally agree on a need for reform, but not on which path...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>
 </div>
 
-<!-- Team -->
+<!-- Pegawai dan Guru -->
 
 <div class="team">
     <div class="team_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/team_background.jpg" data-speed="0.8"></div>
@@ -282,87 +278,52 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">The Best Tutors in Town</h2>
+                    <h2 class="section_title">Guru dan Pegawai</h2>
                     <div class="section_subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row team_row">
+        <div class="row team_row slide-show">
 
             <!-- Team Item -->
-            <div class="col-lg-3 col-md-6 team_col">
-                <div class="team_item">
-                    <div class="team_image"><img src="<?php base_url() ?>template/front-end/images/team_1.jpg" alt=""></div>
-                    <div class="team_body">
-                        <div class="team_title"><a href="#">Jacke Masito</a></div>
-                        <div class="team_subtitle">Marketing & Management</div>
-                        <div class="social_list">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            </ul>
+            <?php foreach ($pegawai as $key => $value) { ?>
+                <div class="col-lg-3 col-md-6 team_col">
+                    <div class="team_item">
+                        <div class="team_image"><img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt=""></div>
+                        <div class="team_body">
+                            <div class="team_title"><a href="#"><?= $value->nama ?></a></div>
+                            <div class="team_subtitle"><?= $value->jabatan ?></div>
+                            <div class="social_list">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Team Item -->
-            <div class="col-lg-3 col-md-6 team_col">
-                <div class="team_item">
-                    <div class="team_image"><img src="<?php base_url() ?>template/front-end/images/team_2.jpg" alt=""></div>
-                    <div class="team_body">
-                        <div class="team_title"><a href="#">William James</a></div>
-                        <div class="team_subtitle">Designer & Website</div>
-                        <div class="social_list">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            </ul>
+            <?php } ?>
+            <?php foreach ($guru as $key => $value) { ?>
+                <div class="col-lg-3 col-md-6 team_col">
+                    <div class="team_item">
+                        <div class="team_image"><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt=" Foto Tidak Di unggah"></div>
+                        <div class="team_body">
+                            <div class="team_title"><a href="#"><?= $value->nama_guru ?></a></div>
+                            <div class="team_subtitle"><?= $value->nama_mapel ?></div>
+                            <div class="social_list">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Team Item -->
-            <div class="col-lg-3 col-md-6 team_col">
-                <div class="team_item">
-                    <div class="team_image"><img src="<?php base_url() ?>template/front-end/images/team_3.jpg" alt=""></div>
-                    <div class="team_body">
-                        <div class="team_title"><a href="#">John Tyler</a></div>
-                        <div class="team_subtitle">Quantum mechanics</div>
-                        <div class="social_list">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Item -->
-            <div class="col-lg-3 col-md-6 team_col">
-                <div class="team_item">
-                    <div class="team_image"><img src="<?php base_url() ?>template/front-end/images/team_4.jpg" alt=""></div>
-                    <div class="team_body">
-                        <div class="team_title"><a href="#">Veronica Vahn</a></div>
-                        <div class="team_subtitle">Math & Physics</div>
-                        <div class="social_list">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -471,3 +432,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.slide-show').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: true,
+        dots: true,
+    });
+</script>

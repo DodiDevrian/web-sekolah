@@ -8,8 +8,17 @@
                 <a href="<?= base_url('mapel') ?>"><i class="fa fa-table fa-fw"></i> Mata Pelajaran</a>
                 <!-- /.nav-second-level -->
             </li>
+
             <li>
-                <a href="<?= base_url('guru') ?>"><i class="fa fa-users fa-fw"></i> Guru</a>
+                <a href="<?= base_url('guru') ?>"><i class="fa fa-users fa-fw"></i> Guru <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="<?= base_url('pegawai') ?>">Pegawai</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url('guru') ?>">Guru Pelajaran</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="<?= base_url('kelas') ?>"><i class="fa fa-cubes fa-fw"></i> Kelas</a>
@@ -31,6 +40,9 @@
             </li>
             <li>
                 <a href="<?= base_url('download') ?>"><i class="fa fa-download fa-fw"></i> Download</a>
+            </li>
+            <li>
+                <a href="<?= base_url('setting') ?>"><i class="fa fa-gear fa-fw"></i> Setting</a>
             </li>
             <li>
                 <a href="<?= base_url('login/logout') ?>" onclick="return confirm('Apakah Yakin Ingin Logout ?')"><i class="fa fa-sign-out fa-fw"> </i> Logout</a>

@@ -29,7 +29,7 @@
                             <li><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
                             <li><a href="<?= base_url('home/berita') ?>">Berita</a></li>
                             <li><a href="<?= base_url('home/download') ?>">Download</a></li>
-                            <li><a href="<?= base_url('home/about') ?>">Hubungi Kami</a></li>
+                            <li><a href="<?= base_url('home/about') ?>">About</a></li>
                         </ul>
 
                         <div class="hamburger menu_mm">

@@ -11,13 +11,16 @@ class Home extends CI_Controller
     public function index()
     {
         $data = array(
-            'title' => 'MAN 1 Lampung Tengah',
-            'title2' => 'MAN 1 Lampung Tengah Official',
-            'slider_berita' => $this->m_home->slider_berita(),
-            'berita_terakhir' => $this->m_home->berita_terakhir(),
-            'home_berita_terkini' => $this->m_home->home_berita_terkini(),
-            'home_galeri' => $this->m_home->home_galeri(),
-            'isi'   => 'v_home'
+            'title'                 => 'MAN 1 Lampung Tengah',
+            'title2'                => 'MAN 1 Lampung Tengah Official',
+            'pegawai'               => $this->m_home->pegawai(),
+            'guru'                  => $this->m_home->guru(),
+            'slider_berita'         => $this->m_home->slider_berita(),
+            'berita_terakhir'       => $this->m_home->berita_terakhir(),
+            'home_berita_terkini'   => $this->m_home->home_berita_terkini(),
+            'home_galeri'           => $this->m_home->home_galeri(),
+            'events'                => $this->m_home->events(),
+            'isi'                   => 'v_home'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }

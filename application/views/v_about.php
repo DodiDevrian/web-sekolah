@@ -12,7 +12,7 @@
                     <div class="breadcrumbs">
                         <ul>
                             <li><a href="<?= base_url('home') ?>">Home</a></li>
-                            <li>Contact</li>
+                            <li>About</li>
                         </ul>
                     </div>
                 </div>
@@ -22,9 +22,7 @@
 </div>
 
 <div class="contact">
-
     <!-- Contact Map -->
-
     <div class="contact_map">
         <!-- Google Map -->
         <div class="map">
@@ -45,7 +43,7 @@
                 <!-- Contact Form -->
                 <div class="col-lg-6">
                     <div class="contact_form">
-                        <div class="contact_info_title">Contact Form</div>
+                        <div class="contact_info_title">Kepala Sekolah</div>
                         <form action="#" class="comment_form">
                             <div>
                                 <div class="form_title">Name</div>

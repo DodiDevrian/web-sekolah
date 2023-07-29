@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Unicat project">
+    <meta name="description" content="Dodi Devrian project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><?= $title ?> - <?= $title2 ?></title>
@@ -20,5 +20,6 @@
 
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.5/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/lightbox.css">
+
 
 </head>

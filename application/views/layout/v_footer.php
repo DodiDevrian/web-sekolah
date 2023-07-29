@@ -75,7 +75,7 @@
 								<div class="footer_section footer_mobile">
 									<!-- <div class="footer_title"></div> -->
 									<div class="footer_mobile_content">
-										<img src="https://www.freepnglogos.com/uploads/logo-ikhlas-beramal-png/ikhlas-beramal-logo-depag-png-transparent-png-logos-10.png" width="200">
+										<img src="<?= base_url() ?>assets/images/logo-man.png" width="200">
 									</div>
 								</div>
 
