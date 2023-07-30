@@ -27,7 +27,7 @@ class Download extends CI_Controller
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './file/';
             $config['allowed_types']    = 'doc|docx|pdf|ppt|pptx|txt|csv|xls|xlsx';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 5000;
             $this->upload->initialize($config);
 
             if (!$this->upload->do_upload('file')) {
@@ -72,7 +72,7 @@ class Download extends CI_Controller
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './file/';
             $config['allowed_types']    = 'doc|docx|pdf|ppt|pptx|txt|csv|xls|xlsx';
-            $config['max_size']         = 2000;
+            $config['max_size']         = 5000;
             $this->upload->initialize($config);
 
             if (!$this->upload->do_upload('file')) {

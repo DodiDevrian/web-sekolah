@@ -90,7 +90,7 @@
                     <div class="form-group">
                         <label>Pendidikan</label>
                         <select name="pendidikan" class="form-control">
-                            <option value="<?= $guru->tempat_lahir ?>"><?= $guru->pendidikan ?></option>
+                            <option value="<?= $guru->pendidikan ?>"><?= $guru->pendidikan ?></option>
                             <option value="D3">D3</option>
                             <option value="S1">S1</option>
                             <option value="S2">S2</option>

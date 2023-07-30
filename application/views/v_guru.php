@@ -27,12 +27,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="mb-3">Guru Sekolah</h2>
+                    <h2 class="mb-3">Pegawai</h2>
                 </div>
                 <!-- Awal Perulangan -->
-                <?php foreach ($guru as $key => $value) {
-                    # code...
-                ?>
+                <?php foreach ($pegawai as $key => $value) { ?>
+                    <div class="col-lg-3 col-md-6 team_col">
+                        <div class="team_item">
+                            <div class="team_image"><img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt=""></div>
+                            <div class="team_body">
+                                <div class="team_title"><a href="#"><?= $value->nama ?></a></div>
+                                <div class="team_subtitle">NIP : <?= $value->nip ?></div>
+                                <div class="team_subtitle"><?= $value->jabatan ?></div>
+                                <div class="social_list">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <hr>
+                <div class="col-lg-12 text-center">
+                    <h2 class="mb-3" style="border-top: solid 1px lightgrey; padding-top: 20px;">Guru Sekolah</h2>
+                </div>
+                <!-- Awal Perulangan -->
+                <?php foreach ($guru as $key => $value) { ?>
                     <div class="col-lg-3 col-md-6 team_col">
                         <div class="team_item">
                             <div class="team_image"><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt=""></div>
@@ -50,7 +72,8 @@
                             </div>
                         </div>
                     </div>
-                <?php } ?><!-- Akhir Perulangan -->
+                <?php } ?>
+                <!-- Akhir Perulangan -->
             </div>
         </div>
     </div>

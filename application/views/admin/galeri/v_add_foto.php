@@ -88,7 +88,7 @@
                         justify-content: space-around;
                     ">
                             <div>
-                                <img src="<?= base_url('foto/' . $value->foto) ?>" width="90%" style="margin: 10px;"><br>
+                                <img src="<?= base_url('foto/' . $value->foto) ?>" style="margin: 10px; width: 90%; height: 198px; object-fit: cover; object-position: 20% 10%;"><br>
                             </div>
                             <div>
                                 <p><?= $value->ket ?></p>

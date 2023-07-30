@@ -15,9 +15,9 @@
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="width: 50px;">No</th>
                         <th>Mata Pelajaran</th>
-                        <th>Action</th>
+                        <th style="width: 100px;">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +27,6 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil" data-toggle="modal" data-target="#myModal<?= $value->id_mapel; ?>"></i>&nbsp;&nbsp;Edit</button>
                                 <a href="<?= base_url('mapel/delete/' . $value->id_mapel) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;&nbsp;Hapus</a>
                             </td>
                         </tr>

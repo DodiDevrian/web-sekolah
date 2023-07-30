@@ -101,7 +101,7 @@
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon1.png" alt="" width="80"></div>
                     <h3 class="feature_title" style="margin-top: 30px;">Berkualitas</h3>
                     <div class="feature_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>Menjadi Lulusan Yang Berkualitas</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon2.png" alt="" width="80"></div>
                     <h3 class="feature_title" style="margin-top: 30px;">Kompetitif</h3>
                     <div class="feature_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>Menciptakan Jiwa Kompetitif Sehingga Dapat Bersaing Dengan Sekolah Lain</p>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon3.png" alt="" width="80"></div>
                     <h3 class="feature_title" style="margin-top: 30px;">Islami</h3>
                     <div class="feature_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>Menjadikan Agama Islam Sebagai Pondasi Kehidupan</p>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon4.png" alt="" width="80"></div>
                     <h3 class="feature_title" style="margin-top: 30px;">Bermartabat</h3>
                     <div class="feature_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>Rukun Terhadap Sesama Manusia</p>
                     </div>
                 </div>
             </div>

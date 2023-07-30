@@ -49,6 +49,7 @@ class Home extends CI_Controller
         $data = array(
             'title' => 'Guru',
             'title2' => 'MAN 1 Lampung Tengah',
+            'pegawai'               => $this->m_home->pegawai(),
             'guru' => $this->m_home->guru(),
             'isi'   => 'v_guru'
         );

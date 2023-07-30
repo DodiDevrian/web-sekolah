@@ -16,7 +16,7 @@ class M_home extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_guru');
         $this->db->join('tbl_mapel', 'tbl_mapel.id_mapel = tbl_guru.id_mapel', 'left');
-        $this->db->order_by('id_guru', 'DESC');
+        $this->db->order_by('nama_guru', 'ASC');
 
         return $this->db->get()->result();
     }
@@ -151,7 +151,7 @@ class M_home extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_kelas');
-        $this->db->order_by('id_kelas', 'DESC');
+        $this->db->order_by('kelas', 'ASC');
 
         return $this->db->get()->result();
     }
@@ -170,7 +170,7 @@ class M_home extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_siswa');
         $this->db->join('tbl_kelas', 'tbl_kelas.id_kelas = tbl_siswa.id_kelas', 'left');
-        $this->db->order_by('id_siswa', 'DESC');
+        $this->db->order_by('nama_siswa', 'ASC');
 
         return $this->db->get()->result();
     }
