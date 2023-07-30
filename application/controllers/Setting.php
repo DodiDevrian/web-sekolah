@@ -60,7 +60,7 @@ class Setting extends CI_Controller
                 }
 
                 $data = array(
-                    'id_kepsek'       => $id_setting,
+                    'id_setting'       => $id_setting,
                     'nip_kepsek'           => $this->input->post('nip_kepsek'),
                     'nama_kepsek'     => $this->input->post('nama_kepsek'),
                     'alamat'  => $this->input->post('alamat'),
@@ -82,7 +82,7 @@ class Setting extends CI_Controller
             $this->load->library('image_lib', $config);
 
             $data = array(
-                'id_kepsek'      => $id_setting,
+                'id_setting'      => $id_setting,
                 'nip_kepsek'           => $this->input->post('nip_kepsek'),
                 'nama_kepsek'    => $this->input->post('nama_kepsek'),
                 'alamat'  => $this->input->post('alamat'),

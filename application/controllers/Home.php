@@ -161,8 +161,9 @@ class Home extends CI_Controller
     public function about()
     {
         $data = array(
-            'title' => 'Hubungi',
+            'title' => 'About',
             'title2' => 'MAN 1 Lampung Tengah',
+            'setting' => $this->m_home->setting(),
             'isi'   => 'v_about'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);

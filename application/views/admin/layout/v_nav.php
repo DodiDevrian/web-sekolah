@@ -10,7 +10,7 @@
             </li>
 
             <li>
-                <a href="<?= base_url('guru') ?>"><i class="fa fa-users fa-fw"></i> Guru <span class="fa arrow"></span></a>
+                <a href=""><i class="fa fa-users fa-fw"></i> Guru <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="<?= base_url('pegawai') ?>">Pegawai</a>

@@ -1,20 +1,18 @@
-<?php foreach ($setting as $key => $value) { ?>
+<?php foreach ($setting as $key => $value) {
+?>
 
     <div class="row">
         <div class="col-md-3 text-center">
-            <p>Kepala Sekolah</p>
+            <b>Kepala Sekolah</b><br>
             <img src="<?= base_url('foto_kepsek/') . $value->foto_kepsek ?>" alt=""><br>
+            <div class="form-group">
+                <label style="margin-bottom: 0px; margin-top: 10px;"><?= $value->nama_kepsek ?></label>
+                <p>NIP : <?= $value->nip_kepsek ?></p>
+
+            </div>
         </div>
 
         <div class="col-md-8">
-            <div class="form-group">
-                <label>Nama Kepala Sekolah :</label>
-                <p><?= $value->nama_kepsek ?></p>
-            </div>
-            <div class="form-group">
-                <label>NIP :</label>
-                <p><?= $value->nip_kepsek ?></p>
-            </div>
             <div class="form-group">
                 <label>Alamat Sekolah</label>
                 <p><?= $value->alamat ?></p>
@@ -36,6 +34,15 @@
         </div>
     </div>
 
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Visi Misi</label>
+                <p><?= $value->visi_misi ?></p>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
@@ -45,13 +52,6 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label>Visi Misi</label>
-                <p><?= $value->visi_misi ?></p>
-            </div>
-        </div>
-    </div>
+
 
 <?php } ?>

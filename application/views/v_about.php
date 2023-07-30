@@ -35,63 +35,55 @@
     </div>
 
     <!-- Contact Info -->
+    <?php foreach ($setting as $key => $value) { ?>
+        <div class="contact_info_container" style="margin-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form -->
+                    <div class="col-lg-4">
+                        <div class="contact_form text-center">
+                            <div class="contact_info_title text-left" style="margin-bottom: 20px;">Kepala Sekolah</div>
+                            <img src="<?= base_url('foto_kepsek/' . $value->foto_kepsek) ?>" alt=""><br>
+                            <h5 style="margin-top: 20px;"><?= $value->nama_kepsek ?></h5>
+                            <p><?= $value->nip_kepsek ?></p>
+                        </div>
+                    </div>
 
-    <div class="contact_info_container">
-        <div class="container">
-            <div class="row">
-
-                <!-- Contact Form -->
-                <div class="col-lg-6">
-                    <div class="contact_form">
-                        <div class="contact_info_title">Kepala Sekolah</div>
-                        <form action="#" class="comment_form">
-                            <div>
-                                <div class="form_title">Name</div>
-                                <input type="text" class="comment_input" required="required">
+                    <!-- Contact Info -->
+                    <div class="col-lg-8">
+                        <div class="contact_info">
+                            <div class="contact_info_title">Info Sekolah</div>
+                            <div class="contact_info_text">
+                                <img src="<?= base_url('assets/images/fotoman.jpg') ?>" style="width: 100%; height: 300px; object-fit: cover; object-position: 20% 10%;" alt="">
                             </div>
-                            <div>
-                                <div class="form_title">Email</div>
-                                <input type="text" class="comment_input" required="required">
+                            <div class="contact_info_location">
+                                <div class="contact_info_location_title">Contact</div>
+                                <ul class="location_list">
+                                    <li><?= $value->alamat ?></li>
+                                    <li><?= $value->no_tel ?></li>
+                                    <li><?= $value->email ?></li>
+                                </ul>
                             </div>
-                            <div>
-                                <div class="form_title">Message</div>
-                                <textarea class="comment_input comment_textarea" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="comment_button trans_200">submit now</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="col-lg-6">
-                    <div class="contact_info">
-                        <div class="contact_info_title">Contact Info</div>
-                        <div class="contact_info_text">
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a distribution of letters.</p>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-md-4">
+                        <div class="contact_info">
+                            <div class="contact_info_title">Visi Misi</div>
+                            <p><?= $value->visi_misi ?></p>
                         </div>
-                        <div class="contact_info_location">
-                            <div class="contact_info_location_title">New York Office</div>
-                            <ul class="location_list">
-                                <li>T8/480 Collins St, Melbourne VIC 3000, New York</li>
-                                <li>1-234-567-89011</li>
-                                <li>info.deercreative@gmail.com</li>
-                            </ul>
-                        </div>
-                        <div class="contact_info_location">
-                            <div class="contact_info_location_title">Australia Office</div>
-                            <ul class="location_list">
-                                <li>Forrest Ray, 191-103 Integer Rd, Corona Australia</li>
-                                <li>1-234-567-89011</li>
-                                <li>info.deercreative@gmail.com</li>
-                            </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="contact_info">
+                            <div class="contact_info_title">Sejarah</div>
+                            <p><?= $value->sejarah ?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

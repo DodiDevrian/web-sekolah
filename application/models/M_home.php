@@ -180,4 +180,13 @@ class M_home extends CI_Model
 
         return $this->db->get()->result();
     }
+
+    public function setting()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_setting');
+        $this->db->order_by('id_setting', 'DESC');
+
+        return $this->db->get()->result();
+    }
 }

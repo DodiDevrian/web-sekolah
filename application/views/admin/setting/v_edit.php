@@ -26,7 +26,7 @@ if (isset($error_upload)) {
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' . $error_upload . '</div>';
 }
 
-echo form_open_multipart('setting/edit');
+echo form_open_multipart('setting/edit/' . $setting->id_setting);
 ?>
 
 <div class="row">
@@ -63,33 +63,37 @@ echo form_open_multipart('setting/edit');
     </div>
 </div>
 
+<div class="form-group">
+    <label>Edit Visi Misi</label>
+    <textarea name="visi_misi" class="form-control" id="editor2" height="500" required><?= $setting->visi_misi ?></textarea>
+</div>
 
 <div class="form-group">
     <label>Edit Sejarah</label>
     <textarea name="sejarah" class="form-control" id="editor" height="500" required><?= $setting->sejarah ?></textarea>
 </div>
 
-<div class="form-group">
-    <label>Edit Visi Misi</label>
-    <textarea name="sejarah" class="form-control" id="editor2" height="500" required><?= $setting->visi_misi ?></textarea>
-</div>
 
-
-<button type="submit" class="btn btn-primary">Simpan</button>
+<button type="submit" class="btn btn-primary" style="margin-bottom: 50px;">Simpan</button>
 
 
 <?php echo form_close(); ?>
+
+<script>
+    initSample();
+</script>
 
 <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
 
 <script>
     ClassicEditor
-        .create(document.querySelector('#editor2'))
-        .catch(error => {
-            console.error(error);
+        .create(document.querySelector('#editor2'), {
+            // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+        })
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
         });
-</script>
-
-<script>
-    initSample();
 </script>
