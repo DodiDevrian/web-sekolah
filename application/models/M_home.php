@@ -117,6 +117,18 @@ class M_home extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function galeri_on_berita()
+    {
+        $this->db->select('tbl_galeri.*,count(tbl_foto.id_galeri) as jml_foto');
+        $this->db->from('tbl_galeri');
+        $this->db->join('tbl_foto', 'tbl_foto.id_galeri = tbl_galeri.id_galeri', 'left');
+        $this->db->group_by('tbl_galeri.id_galeri');
+        $this->db->order_by('tbl_galeri.id_galeri', 'DESC');
+        $this->db->limit(6);
+
+        return $this->db->get()->result();
+    }
+
     public function detail_galeri($id_galeri)
     {
         $this->db->select('*');
@@ -176,7 +188,7 @@ class M_home extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_pegawai');
-        $this->db->order_by('id_pegawai', 'DESC');
+        $this->db->order_by('id_pegawai', 'ASC');
 
         return $this->db->get()->result();
     }

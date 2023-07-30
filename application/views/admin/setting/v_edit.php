@@ -88,12 +88,10 @@ echo form_open_multipart('setting/edit/' . $setting->id_setting);
 <script>
     ClassicEditor
         .create(document.querySelector('#editor2'), {
-            // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            removePlugins: ['Heading', 'Link', 'CKFinder'],
+            toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote']
         })
-        .then(editor => {
-            window.editor = editor;
-        })
-        .catch(err => {
-            console.error(err.stack);
+        .catch(error => {
+            console.log(error);
         });
 </script>

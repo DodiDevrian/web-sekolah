@@ -17,11 +17,8 @@
                                     Sekolah
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Visi Misi</a>
                                     <a class="dropdown-item" href="<?= base_url('home/guru') ?>">Guru</a>
                                     <a class="dropdown-item" href="<?= base_url('home/kelas') ?>">Siswa</a>
-                                    <a class="dropdown-item" href="#">Kurikulum</a>
-                                    <a class="dropdown-item" href="#">Sarana</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
@@ -81,13 +78,14 @@
     </div>
     <nav class="menu_nav">
         <ul class="menu_mm">
-            <li class="menu_mm"><a href="index.html">Home</a></li>
-            <li class="menu_mm"><a href="#">About</a></li>
-            <li class="menu_mm"><a href="#">Courses</a></li>
-            <li class="menu_mm"><a href="#">Blog</a></li>
-            <li class="menu_mm"><a href="#">Page</a></li>
-            <li class="menu_mm"><a href="contact.html">Contact</a></li>
-            <li class="menu_mm"><a href="contact.html">Login</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home') ?>">Home</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/guru') ?>">Guru</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/kelas') ?>">Siswa</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/berita') ?>">Berita</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/download') ?>">Download</a></li>
+            <li class="menu_mm"><a href="<?= base_url('home/about') ?>">About</a></li>
+            <li class="menu_mm"><a href="<?= base_url('login') ?>">Login</a></li>
         </ul>
     </nav>
 </div>

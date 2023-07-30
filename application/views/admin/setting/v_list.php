@@ -37,16 +37,16 @@
     <div class="row" style="margin-top: 40px;">
         <div class="col-md-12">
             <div class="form-group">
-                <label>Visi Misi</label>
+                <h3><b>Visi Misi</b></h3>
                 <p><?= $value->visi_misi ?></p>
             </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top: 40px;">
         <div class="col-md-12">
             <div class="form-group">
-                <label>Sejarah</label>
+                <h3><b>Sejarah</b></h3>
                 <p><?= $value->sejarah ?></p>
             </div>
         </div>

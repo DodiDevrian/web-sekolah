@@ -90,7 +90,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Selamat Datang Di Website MAN 1 Lampung Tengah</h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Galeri MAN 1 Lampung Tengah</h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <div class="col-lg-4 about_col about_col_left" style="margin-top: 15px;">
                     <div class="about_item">
                         <div class="about_item_image"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="<?= base_url('sampul/') . $value->sampul ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></a></div>
-                        <div class="about_item_title"><a href="#"><?= $value->nama_galeri ?></a></div>
+                        <div class="about_item_title"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><?= $value->nama_galeri ?></a></div>
                         <div class="">
                             <p>Jumlah : <?= $value->jml_foto ?> Foto</p>
                         </div>
@@ -188,7 +188,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Events</h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p>3 Event Terdekat Akan Ditampilkan Di Sini</p>
                     </div>
                 </div>
             </div>
@@ -254,10 +254,9 @@
                             <div class="event_content">
                                 <div class="event_title"><a href="#"><?= $value->nama_event ?></a></div>
                                 <div class="event_info_container">
-                                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>15.00 - 19.30</span></div>
-                                    <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
+                                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span><?= date("H:i", strtotime($value->waktu_mulai)); ?> - <?= date("H:i", strtotime($value->waktu_selesai)); ?></span></div>
                                     <div class="event_text">
-                                        <p>Policy analysts generally agree on a need for reform, but not on which path...</p>
+                                        <p><?= $value->ket_event ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +279,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Guru dan Pegawai</h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -337,7 +336,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Berita Terkini</h2>
                     <div class="section_subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p>
+                        <p></p>
                     </div>
                 </div>
             </div>

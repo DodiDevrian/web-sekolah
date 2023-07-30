@@ -83,29 +83,6 @@ switch (date('m', strtotime($tanggal))) {
                     </div>
                     <div class="blog_image"><img src="<?= base_url('gambar_berita/') . $berita->gambar_berita ?>" alt=""></div>
                     <div><?= $berita->isi_berita ?></div>
-                    <blockquote>Apa ajalah</blockquote>
-                </div>
-                <div class="blog_extra d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-                    <div class="blog_tags">
-                        <span>Tags: </span>
-                        <ul>
-                            <li><a href="#">Education</a>, </li>
-                            <li><a href="#">Math</a>, </li>
-                            <li><a href="#">Food</a>, </li>
-                            <li><a href="#">Schools</a>, </li>
-                            <li><a href="#">Religion</a>, </li>
-                        </ul>
-                    </div>
-                    <div class="blog_social ml-lg-auto">
-                        <span>Share: </span>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
@@ -134,45 +111,15 @@ switch (date('m', strtotime($tanggal))) {
 
                     <!-- Gallery -->
                     <div class="sidebar_section">
-                        <div class="sidebar_section_title">Instagram</div>
+                        <div class="sidebar_section_title">Geleri</div>
                         <div class="sidebar_gallery">
                             <ul class="gallery_items d-flex flex-row align-items-start justify-content-between flex-wrap">
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_1_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_1.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_2_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_2.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_3_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_3.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_4_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_4.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_5_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_5.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li class="gallery_item">
-                                    <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                    <a class="colorbox" href="<?= base_url() ?>template/front-end/images/gallery_6_large.jpg">
-                                        <img src="<?= base_url() ?>template/front-end/images/gallery_6.jpg" alt="">
-                                    </a>
-                                </li>
+                                <?php foreach ($home_galeri as $key => $value) { ?>
+                                    <li class="gallery_item">
+                                        <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
+                                        <a class="colorbox" href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="<?= base_url('sampul/') . $value->sampul ?>" alt="" style="width: 100%; height: 94.66px; object-fit: cover; object-position: 20% 10%;"></a>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>

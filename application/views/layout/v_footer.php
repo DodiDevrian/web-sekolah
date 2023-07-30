@@ -55,13 +55,13 @@
 									<div class="footer_title">Pages</div>
 									<div class="footer_links_container">
 										<ul class="row">
-											<li class="col-6"><a href="index.html">Home</a></li>
-											<li class="col-6"><a href="about.html">About</a></li>
-											<li class="col-6"><a href="contact.html">Contact</a></li>
-											<li class="col-6"><a href="#">Features</a></li>
-											<li class="col-6"><a href="courses.html">Courses</a></li>
-											<li class="col-6"><a href="#">Events</a></li>
-											<li class="col-6"><a href="#">Gallery</a></li>
+											<li class="col-6"><a href="<?= base_url('home') ?>">Home</a></li>
+											<li class="col-6"><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
+											<li class="col-6"><a href="<?= base_url('home/berita') ?>">Berita</a></li>
+											<li class="col-6"><a href="<?= base_url('home/download') ?>">Download</a></li>
+											<li class="col-6"><a href="<?= base_url('home/guru') ?>">Guru</a></li>
+											<li class="col-6"><a href="<?= base_url('home/about') ?>">About</a></li>
+											<li class="col-6"><a href="<?= base_url('home/kelas') ?>">Siswa</a></li>
 											<li class="col-6"><a href="<?= base_url('login') ?>">Login</a></li>
 										</ul>
 									</div>

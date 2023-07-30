@@ -37,9 +37,8 @@
                             <div class="team_item">
                                 <div class="team_image"><img src="<?= base_url('foto_siswa/') . $value->foto_siswa ?>" alt=""></div>
                                 <div class="team_body">
-                                    <div class="team_title"><a href="#"><?= $value->nama_siswa ?></a></div>
-                                    <div class="team_subtitle">Angkatan : </div>
-                                    <div class="team_subtitle">""</div>
+                                    <div class="team_title" style="margin-bottom: 50px;"><a href="#"><?= $value->nama_siswa ?></a></div>
+                                    <div class="team_subtitle"></div>
                                     <div class="social_list">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

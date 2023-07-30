@@ -81,8 +81,7 @@ class Siswa extends CI_Controller
         $this->form_validation->set_rules('nama_siswa', 'Nama Lengkap', 'required');
         $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
         $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
-        $this->form_validation->set_rules('kelas', 'Kelas', 'required');
-        $this->form_validation->set_rules('angkatan', 'Angkatan', 'required');
+        $this->form_validation->set_rules('id_kelas', 'Kelas', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto_siswa/';
@@ -96,7 +95,6 @@ class Siswa extends CI_Controller
                     'title'     => 'Siswa',
                     'title2'    => 'Ubah Data Siswa',
                     'error'     => $this->upload->display_errors(),
-                    'angkatan'  => $this->m_siswa->lists(),
                     'siswa'     => $this->m_siswa->detail($id_siswa),
                     'isi'       => 'admin/siswa/v_edit'
                 );
@@ -119,8 +117,7 @@ class Siswa extends CI_Controller
                     'nama_siswa'     => $this->input->post('nama_siswa'),
                     'tempat_lahir'  => $this->input->post('tempat_lahir'),
                     'tgl_lahir'     => $this->input->post('tgl_lahir'),
-                    'kelas'      => $this->input->post('kelas'),
-                    'angkatan'    => $this->input->post('angkatan'),
+                    'id_kelas'      => $this->input->post('id_kelas'),
                     'foto_siswa'     => $upload_data['uploads']['file_name']
                 );
 
@@ -139,8 +136,7 @@ class Siswa extends CI_Controller
                 'nama_siswa'    => $this->input->post('nama_siswa'),
                 'tempat_lahir'  => $this->input->post('tempat_lahir'),
                 'tgl_lahir'     => $this->input->post('tgl_lahir'),
-                'kelas'         => $this->input->post('kelas'),
-                'angkatan'      => $this->input->post('angkatan'),
+                'id_kelas'         => $this->input->post('id_kelas'),
             );
 
             $this->m_siswa->edit($data);
@@ -150,8 +146,8 @@ class Siswa extends CI_Controller
         $data = array(
             'title'     => 'Siswa',
             'title2'    => 'Ubah Data Siswa',
-            'angkatan'  => $this->m_siswa->lists(),
             'siswa'     => $this->m_siswa->detail($id_siswa),
+            'kelas'     => $this->m_kelas->lists(),
             'isi'       => 'admin/siswa/v_edit'
         );
         $this->load->view('admin/layout/v_wrapper', $data, FALSE);

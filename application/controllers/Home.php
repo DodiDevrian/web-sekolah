@@ -90,8 +90,9 @@ class Home extends CI_Controller
         $data = array(
             'pagination'        => $this->pagination->create_links(),
             'title'             => 'Berita',
-            'berita_terkini'    => $this->m_home->berita_terkini(),
             'title2'            => 'MAN 1 Lampung Tengah',
+            'berita_terkini'    => $this->m_home->berita_terkini(),
+            'home_galeri'           => $this->m_home->galeri_on_berita(),
             'berita'            => $this->m_home->berita($limit, $start),
             'isi'               => 'v_berita'
         );
@@ -104,6 +105,7 @@ class Home extends CI_Controller
             'title'  => 'Detail Berita',
             'title2' => 'MAN 1 Lampung Tengah',
             'berita_terkini'    => $this->m_home->berita_terkini(),
+            'home_galeri'           => $this->m_home->galeri_on_berita(),
             'berita' => $this->m_home->detail_berita($slug_berita),
             'isi'    => 'v_detail_berita'
         );
