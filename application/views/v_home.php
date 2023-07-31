@@ -2,6 +2,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<link rel="stylesheet" href="<?= base_url('slider') ?>/css/style.css">
+<link rel="stylesheet" href="<?= base_url('slider') ?>/css/swiper-bundle.min.css">
 
 <!-- Home -->
 <div class="home">
@@ -61,7 +63,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center" style="background: rgba(255,255,255,0.6); border-radius: 10px;">
-                                    <div><a href="" class="home_slider_title"><?= $value->judul_berita ?></a></div>
+                                    <div><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>" class="home_slider_title"><?= $value->judul_berita ?></a></div>
                                     <div style="margin-top: 20px; font-family: 'Roboto Slab', serif;" class="home_slider_subtitle"><?= date('d', strtotime($tanggal)) . ' ' . $bulan . ' ' . date('Y', strtotime($tanggal)) . '  |  ' . date('H:i', strtotime($tanggal)) ?></div>
                                     <div class="home_slider_form_container">
                                     </div>
@@ -88,7 +90,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">Selamat Datang Di Website MAN 1 Lampung Tengah</h2>
+                    <h2 class="section_title">Agenda Madrasah</h2>
                     <div class="section_subtitle">
                         <p></p>
                     </div>
@@ -140,7 +142,7 @@
     </div>
 </div>
 
-<!-- Galei MAN -->
+<!-- Galeri MAN -->
 
 <div class="courses">
     <div class="section_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/courses_background.jpg" data-speed="0.8"></div>
@@ -270,7 +272,6 @@
 </div>
 
 <!-- Pegawai dan Guru -->
-
 <div class="team">
     <div class="team_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/team_background.jpg" data-speed="0.8"></div>
     <div class="container">
@@ -284,45 +285,45 @@
                 </div>
             </div>
         </div>
-        <div class="row team_row slide-show">
+        <div class="new-slider">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <?php foreach ($pegawai as $key => $value) { ?>
+                            <div class="card swiper-slide" style="width: 200px; margin-bottom: 50px;">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt="" class="card-img">
+                                    </div>
+                                </div>
+                                <div class="card-content text-center" style="margin-bottom: 20px;">
+                                    <h2 class="name"><?= $value->nama ?></h2>
+                                    <p class="description"><?= $value->jabatan ?></p>
+                                </div>
+                            </div>
+                        <?php } ?>
 
-            <!-- Team Item -->
-            <?php foreach ($pegawai as $key => $value) { ?>
-                <div class="col-lg-3 col-md-6 team_col">
-                    <div class="team_item">
-                        <div class="team_image"><img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt=""></div>
-                        <div class="team_body">
-                            <div class="team_title"><a href="#"><?= $value->nama ?></a></div>
-                            <div class="team_subtitle"><?= $value->jabatan ?></div>
-                            <div class="social_list">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                </ul>
+                        <?php foreach ($guru as $key => $value) { ?>
+                            <div class="card swiper-slide" style="width: 200px; margin-bottom: 50px;">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt="" class="card-img">
+                                    </div>
+                                </div>
+                                <div class="card-content text-center" style="margin-bottom: 20px;">
+                                    <h2 class="name"><?= $value->nama_guru ?></h2>
+                                    <p class="description"><?= $value->nama_mapel ?></p>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-            <?php } ?>
-            <?php foreach ($guru as $key => $value) { ?>
-                <div class="col-lg-3 col-md-6 team_col">
-                    <div class="team_item">
-                        <div class="team_image"><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt=" Foto Tidak Di unggah"></div>
-                        <div class="team_body">
-                            <div class="team_title"><a href="#"><?= $value->nama_guru ?></a></div>
-                            <div class="team_subtitle"><?= $value->nama_mapel ?></div>
-                            <div class="social_list">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
+                <!-- <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div> -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -393,7 +394,7 @@
                                     break;
                             } ?>
                             <div class="news_post_image"><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 291px; object-fit: cover; object-position: 10% 10%;"></div>
-                            <div class="news_post_large_title"><a href="blog_single.html"><?= $value->judul_berita ?></a></div>
+                            <div class="news_post_large_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= $value->judul_berita ?></a></div>
                             <div class="news_post_meta">
                                 <ul>
                                     <li><?= $value->nama_user ?></li>
@@ -431,6 +432,68 @@
         </div>
     </div>
 </div>
+
+<!-- Slider Lama -->
+<!-- <div class="team">
+    <div class="team_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/team_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">Guru dan Pegawai</h2>
+                    <div class="section_subtitle">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row team_row slide-show">
+
+            <?php foreach ($pegawai as $key => $value) { ?>
+                <div class="col-lg-3 col-md-6 team_col">
+                    <div class="team_item">
+                        <div class="team_image"><img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt=""></div>
+                        <div class="team_body">
+                            <div class="team_title"><a href="#"><?= $value->nama ?></a></div>
+                            <div class="team_subtitle"><?= $value->jabatan ?></div>
+                            <div class="social_list">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php foreach ($guru as $key => $value) { ?>
+                <div class="col-lg-3 col-md-6 team_col">
+                    <div class="team_item">
+                        <div class="team_image"><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt=" Foto Tidak Di unggah"></div>
+                        <div class="team_body">
+                            <div class="team_title"><a href="#"><?= $value->nama_guru ?></a></div>
+                            <div class="team_subtitle"><?= $value->nama_mapel ?></div>
+                            <div class="social_list">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div> -->
+
+<!-- Swiper JS -->
+<script src="<?= base_url('slider') ?>/js/swiper-bundle.min.js"></script>
+<!-- JavaScript -->
+<script src="<?= base_url('slider') ?>/js/script.js"></script>
+
 
 <script>
     $('.slide-show').slick({

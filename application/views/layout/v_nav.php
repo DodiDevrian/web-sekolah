@@ -14,13 +14,16 @@
                             <li><a href="<?= base_url('home') ?>">Home</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Sekolah
+                                    Madrasah
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="<?= base_url('home/guru') ?>">Guru</a>
                                     <a class="dropdown-item" href="<?= base_url('home/kelas') ?>">Siswa</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Kurikulum</a>
+                                    <a class="dropdown-item" href="#">Kesiswaan</a>
+                                    <a class="dropdown-item" href="#">Sarana</a>
+                                    <a class="dropdown-item" href="#">Humas</a>
                                 </div>
                             </li>
                             <li><a href="<?= base_url('home/galeri') ?>">Galeri</a></li>
@@ -85,7 +88,17 @@
             <li class="menu_mm"><a href="<?= base_url('home/berita') ?>">Berita</a></li>
             <li class="menu_mm"><a href="<?= base_url('home/download') ?>">Download</a></li>
             <li class="menu_mm"><a href="<?= base_url('home/about') ?>">About</a></li>
-            <li class="menu_mm"><a href="<?= base_url('login') ?>">Login</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Madrasah
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Kurikulum</a>
+                    <a class="dropdown-item" href="#">Kesiswaan</a>
+                    <a class="dropdown-item" href="#">Sarana</a>
+                    <a class="dropdown-item" href="#">Humas</a>
+                </div>
+            </li>
         </ul>
     </nav>
 </div>

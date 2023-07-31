@@ -2,7 +2,7 @@
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li>
-                <a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard fa-fw"></i> Agenda</a>
             </li>
             <li>
                 <a href="<?= base_url('mapel') ?>"><i class="fa fa-table fa-fw"></i> Mata Pelajaran</a>
@@ -10,7 +10,7 @@
             </li>
 
             <li>
-                <a href=""><i class="fa fa-users fa-fw"></i> Guru <span class="fa arrow"></span></a>
+                <a><i class="fa fa-users fa-fw"></i> Guru <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="<?= base_url('pegawai') ?>">Pegawai</a>
@@ -25,9 +25,6 @@
             </li>
             <li>
                 <a href="<?= base_url('siswa') ?>"><i class="fa fa-mortar-board fa-fw"></i> Siswa</a>
-            </li>
-            <li>
-                <a href="<?= base_url('pengumuman') ?>"><i class="fa fa-bullhorn fa-fw"></i> Pengumuman</a>
             </li>
             <li>
                 <a href="<?= base_url('events') ?>"><i class="fa fa-files-o fa-fw"></i> Event</a>

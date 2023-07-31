@@ -42,7 +42,7 @@
                     <!-- Contact Form -->
                     <div class="col-lg-4">
                         <div class="contact_form text-center">
-                            <div class="contact_info_title text-left" style="margin-bottom: 20px;">Kepala Sekolah</div>
+                            <div class="contact_info_title" style="margin-bottom: 20px;">Kepala Sekolah</div>
                             <img src="<?= base_url('foto_kepsek/' . $value->foto_kepsek) ?>" alt=""><br>
                             <h5 style="margin-top: 20px;"><?= $value->nama_kepsek ?></h5>
                             <p><?= $value->nip_kepsek ?></p>
@@ -54,7 +54,7 @@
                         <div class="contact_info">
                             <div class="contact_info_title">Info Sekolah</div>
                             <div class="contact_info_text">
-                                <img src="<?= base_url('assets/images/fotoman.jpg') ?>" style="width: 100%; height: 300px; object-fit: cover; object-position: 20% 10%;" alt="">
+                                <iframe width="1257" height="707" src="https://www.youtube.com/embed/ZVFL1IikExo" style="width: 100%; height: 300px; object-fit: cover; object-position: 20% 10%;" title="PROFIL MAN 1 LAMPUNG TENGAH" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="contact_info_location">
                                 <div class="contact_info_location_title">Contact</div>
