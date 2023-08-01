@@ -79,7 +79,7 @@ class Berita extends CI_Controller
             );
 
             $this->m_berita->edit($data);
-            $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
+            $this->session->set_flashdata('pesan', 'Data Berhasil Diubah!');
             redirect('berita');
         }
     }

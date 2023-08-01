@@ -75,7 +75,7 @@
                         <label>Jabatan</label>
                         <select name="jabatan" class="form-control" data-live-search="true">
                             <option value="<?= $pegawai->jabatan ?>"><?= $pegawai->jabatan ?></option>
-                            <option value="Kepala Sekolah">Kepala Sekolah</option>
+                            <option value="Kepala Madrasah">Kepala Madrasah</option>
                             <option value="Wakil Kepala Bidang Kurikulum">Wakil Kepala Bidang Kurikulum</option>
                             <option value="Wakil Kepala Bidang Kesiswaan">Wakil Kepala Bidang Kesiswaan</option>
                             <option value="Wakil Kepala Bidang Sarana Prasarana">Wakil Kepala Bidang Sarana Prasarana</option>

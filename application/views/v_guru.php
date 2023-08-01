@@ -35,16 +35,9 @@
                         <div class="team_item">
                             <div class="team_image"><img src="<?= base_url('foto_pegawai/') . $value->foto_pegawai ?>" alt=""></div>
                             <div class="team_body">
-                                <div class="team_title"><a href="#"><?= $value->nama ?></a></div>
+                                <div class="team_title"><a href=""><?= $value->nama ?></a></div>
                                 <div class="team_subtitle">NIP : <?= $value->nip ?></div>
                                 <div class="team_subtitle"><?= $value->jabatan ?></div>
-                                <div class="social_list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -59,16 +52,9 @@
                         <div class="team_item">
                             <div class="team_image"><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" alt=""></div>
                             <div class="team_body">
-                                <div class="team_title"><a href="#"><?= $value->nama_guru ?></a></div>
+                                <div class="team_title"><a href=""><?= $value->nama_guru ?></a></div>
                                 <div class="team_subtitle">NIP : <?= $value->nip ?></div>
                                 <div class="team_subtitle"><?= $value->nama_mapel ?></div>
-                                <div class="social_list">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>

@@ -63,7 +63,7 @@ class Home extends CI_Controller
         $this->load->library('pagination');
         $config['base_url'] = base_url('home/berita');
         $config['total_rows'] = count($this->m_home->total_berita());
-        $config['per_page'] = 8;
+        $config['per_page'] = 6;
         $config['uri_segmen'] = 3;
 
         $limit = $config['per_page'];
@@ -96,6 +96,7 @@ class Home extends CI_Controller
             'title2'            => 'MAN 1 Lampung Tengah',
             'berita_terkini'    => $this->m_home->berita_terkini(),
             'home_galeri'           => $this->m_home->galeri_on_berita(),
+            'agenda'           => $this->m_home->agenda_slider(),
             'berita'            => $this->m_home->berita($limit, $start),
             'isi'               => 'v_berita'
         );
@@ -109,6 +110,7 @@ class Home extends CI_Controller
             'title2' => 'MAN 1 Lampung Tengah',
             'berita_terkini'    => $this->m_home->berita_terkini(),
             'home_galeri'           => $this->m_home->galeri_on_berita(),
+            'agenda'           => $this->m_home->agenda_slider(),
             'berita' => $this->m_home->detail_berita($slug_berita),
             'isi'    => 'v_detail_berita'
         );

@@ -41,8 +41,8 @@
                 <div class="col-lg-4 about_col about_col_left" style="margin-top: 25px;">
                     <div class="about_item">
                         <div class="about_item_image">
-                            <a href="<?= base_url('foto/') . $value->foto ?>" data-lightbox="roadtrip" data-title="<?= $value->ket ?>">
-                                <img src="<?= base_url('foto/') . $value->foto ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;">
+                            <a href="https://drive.google.com/uc?export=view&id=<?= $value->foto ?>" data-lightbox="roadtrip" data-title="<?= $value->ket ?>">
+                                <img src="https://drive.google.com/uc?export=view&id=<?= $value->foto ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;">
                             </a>
                         </div>
                         <div class="text-center">

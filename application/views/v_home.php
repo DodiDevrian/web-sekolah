@@ -1,9 +1,13 @@
+<link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/responsive.css">
+
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <link rel="stylesheet" href="<?= base_url('slider') ?>/css/style.css">
 <link rel="stylesheet" href="<?= base_url('slider') ?>/css/swiper-bundle.min.css">
+
 
 <!-- Home -->
 <div class="home">
@@ -166,7 +170,7 @@
                 }
             ?>
                 <div class="owl-item">
-                    <div class="home_slider_background" style="background-image:url(<?= base_url('gambar_berita/' . $value->gambar_berita) ?>"></div>
+                    <div class="home_slider_background" style="background-image:url(https://drive.google.com/uc?export=view&id=<?= $value->gambar_berita ?>"></div>
                     <div class="home_slider_content">
                         <div class="container">
                             <div class="row">
@@ -345,7 +349,7 @@
             <?php foreach ($home_galeri as $key => $value) { ?>
                 <div class="col-lg-4 about_col about_col_left" style="margin-top: 15px;">
                     <div class="about_item">
-                        <div class="about_item_image"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="<?= base_url('sampul/') . $value->sampul ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></a></div>
+                        <div class="about_item_image"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="https://drive.google.com/uc?export=view&id=<?= $value->sampul ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></a></div>
                         <div class="about_item_title"><a href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><?= $value->nama_galeri ?></a></div>
                         <div class="">
                             <p>Jumlah : <?= $value->jml_foto ?> Foto</p>
@@ -575,7 +579,7 @@
                                     $bulan = 'Bulan Tidak Diketahi';
                                     break;
                             } ?>
-                            <div class="news_post_image"><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 291px; object-fit: cover; object-position: 10% 10%;"></div>
+                            <div class="news_post_image"><img src="https://drive.google.com/uc?export=view&id=<?= $value->gambar_berita ?>" alt="" style="width: 100%; height: 291px; object-fit: cover; object-position: 10% 10%;"></div>
                             <div class="news_post_large_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= $value->judul_berita ?></a></div>
                             <div class="news_post_meta">
                                 <ul>
@@ -609,6 +613,22 @@
                         </div>
                     <?php } ?>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team">
+    <div class="team_background parallax-window" data-parallax="scroll" data-image-src="<?php base_url() ?>template/front-end/images/team_background.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <img src="<?= base_url('assets/images/logordm.png') ?>" alt="">
+                    <h2 class="section_title">Rapor Digital Madrasah MAN 1 Lampung Tengah</h2>
+                    <h4 style="margin-top: 50px; margin-bottom: 20px;">hanya untuk guru MAN 1 Lampung Tengah bukan untuk siswa</h4>
+                    <a href="https://man1lampungtengah.my.id/" class="btn btn-success">Klick disini</a>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@
                     <tr>
                         <th style="width: 50px;">No</th>
                         <th>Mata Pelajaran</th>
-                        <th style="width: 100px;">Action</th>
+                        <th style="width: 150px;">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +27,7 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
                             <td>
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal<?= $value->id_mapel; ?>"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="<?= base_url('mapel/delete/' . $value->id_mapel) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;&nbsp;Hapus</a>
                             </td>
                         </tr>
@@ -73,10 +74,10 @@
                     <h4 class="modal-title" id="myModalLabel">Tambah Data Mata Pelajaran</h4>
                 </div>
                 <div class="modal-body">
-                    <?php echo form_open('mapel/add'); ?>
+                    <?php echo form_open('mapel/edit/' . $value->id_mapel); ?>
                     <div class="form-group">
                         <label>Nama Mata Pelajaran</label>
-                        <input class="form-control" type="text" name="nama_mapel" placeholder="Masukkan Nama Mata Pelajaran" required>
+                        <input class="form-control" type="text" name="nama_mapel" value="<?= $value->nama_mapel; ?>" placeholder="Masukkan Nama Mata Pelajaran" required>
                     </div>
                 </div>
                 <div class="modal-footer">

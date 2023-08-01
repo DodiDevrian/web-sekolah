@@ -53,7 +53,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Upload Foto</label>
-                        <input class="form-control" type="file" name="foto">
+                        <input class="form-control" type="text" placeholder="Masuukan ID File Google Drive" name="foto" required>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -88,7 +88,7 @@
                         justify-content: space-around;
                     ">
                             <div>
-                                <img src="<?= base_url('foto/' . $value->foto) ?>" style="margin: 10px; width: 90%; height: 198px; object-fit: cover; object-position: 20% 10%;"><br>
+                                <img src="https://drive.google.com/uc?export=view&id=<?= $value->foto ?>" style="margin: 10px; width: 90%; height: 198px; object-fit: cover; object-position: 20% 10%;"><br>
                             </div>
                             <div>
                                 <p><?= $value->ket ?></p>

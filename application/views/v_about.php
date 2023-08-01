@@ -34,6 +34,18 @@
         </div>
     </div>
 
+    <style>
+        @media (max-width: 700px) {
+            .akreditasi {
+                height: 270px;
+            }
+
+            .visi {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
     <!-- Contact Info -->
     <?php foreach ($setting as $key => $value) { ?>
         <div class="contact_info_container" style="margin-top: 20px;">
@@ -67,9 +79,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 50px;">
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 style="margin-bottom: 20px; margin-top: 50px;">Akreditasi MAN 1 Lampung Tengah</h3>
+                        <iframe class="akreditasi" src="https://drive.google.com/file/d/1TkRsogzpo-iTI49d_UFrDfPsBxAHY3DD/preview" width="100%" height="600vh" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px;">
                     <div class="col-md-4">
-                        <div class="contact_info">
+                        <div class="contact_info visi">
                             <div class="contact_info_title">Visi Misi</div>
                             <p><?= $value->visi_misi ?></p>
                         </div>

@@ -85,9 +85,9 @@
                             } ?>
                             <div class="col-lg-6 course_col">
                                 <div class="course">
-                                    <div class="course_image"><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></div>
+                                    <div class="course_image"><img src="https://drive.google.com/uc?export=view&id=<?= $value->gambar_berita ?>" alt="" style="width: 100%; height: 198px; object-fit: cover; object-position: 20% 10%;"></div>
                                     <div class="course_body">
-                                        <h3 class="course_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></h3>
+                                        <h3 class="course_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 40)  ?>...</a></h3>
                                         <div class="blog_post_meta">
                                             <ul>
 
@@ -133,7 +133,7 @@
                             <?php foreach ($berita_terkini as $key => $value) { ?>
                                 <div class="latest d-flex flex-row align-items-start justify-content-start">
                                     <div class="latest_image">
-                                        <div><img src="<?= base_url('gambar_berita/') . $value->gambar_berita ?>" alt="" style="width: 100%; height: 60px; object-fit: cover; object-position: 20% 10%;"></div>
+                                        <div><img src="https://drive.google.com/uc?export=view&id=<?= $value->gambar_berita ?>" alt="" style="width: 100%; height: 60px; object-fit: cover; object-position: 20% 10%;"></div>
                                     </div>
                                     <div class="latest_content">
                                         <div class="latest_title"><a href="<?= base_url('home/detail_berita/' . $value->slug_berita) ?>"><?= substr(strip_tags($value->judul_berita), 0, 25)  ?>...</a></div>
@@ -153,7 +153,7 @@
                                 <?php foreach ($home_galeri as $key => $value) { ?>
                                     <li class="gallery_item">
                                         <div class="gallery_item_overlay d-flex flex-column align-items-center justify-content-center">+</div>
-                                        <a class="colorbox" href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="<?= base_url('sampul/') . $value->sampul ?>" alt="" style="width: 100%; height: 94.66px; object-fit: cover; object-position: 20% 10%;"></a>
+                                        <a class="colorbox" href="<?= base_url('home/detail_galeri/' . $value->id_galeri) ?>"><img src="https://drive.google.com/uc?export=view&id=<?= $value->sampul ?>" alt="" style="width: 100%; height: 94.66px; object-fit: cover; object-position: 20% 10%;"></a>
                                     </li>
                                 <?php } ?>
                             </ul>
@@ -161,16 +161,20 @@
                     </div>
 
                     <!-- Banner -->
-                    <!-- <div class="sidebar_section">
-                        <div class="sidebar_banner d-flex flex-column align-items-center justify-content-center text-center">
-                            <div class="sidebar_banner_background" style="background-image:url(<?= base_url() ?>template/front-end/images/banner_1.jpg)"></div>
-                            <div class="sidebar_banner_overlay"></div>
-                            <div class="sidebar_banner_content">
-                                <div class="banner_title">Free Book</div>
-                                <div class="banner_button"><a href="#">download now</a></div>
+                    <div class="sidebar_section">
+                        <?php foreach ($agenda as $key => $value) { ?>
+                            <div class="sidebar_banner d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="sidebar_banner_background" style="background-image:url(<?= base_url('foto_agenda/' . $value->foto_agenda) ?>)"></div>
+                                <div class="sidebar_banner_overlay"></div>
+                                <div class="sidebar_banner_content text-center">
+                                    <div class="banner_title"><?= $value->nama_agenda ?></div>
+                                    <p style="color: white; margin-top: 5px;"><?= $value->keterangan ?></p>
+                                    <div class="banner_button" style="margin: auto;"><a href="<?= $value->link ?>" target="_blank">Klick Disini</a></div>
+                                </div>
                             </div>
-                        </div>
-                    </div> -->
+                        <?php } ?>
+                    </div>
+
                 </div>
             </div>
         </div>

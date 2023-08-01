@@ -79,10 +79,10 @@ class Galeri extends CI_Controller
     public function delete($id_galeri)
     {
         // Hapus file foto yang lama
-        $galeri = $this->m_galeri->detail($id_galeri);
-        if ($galeri->sampul != "") {
-            unlink('./sampul/' . $galeri->sampul);
-        }
+        // $galeri = $this->m_galeri->detail($id_galeri);
+        // if ($galeri->sampul != "") {
+        //     unlink('./sampul/' . $galeri->sampul);
+        // }
 
         $data = array('id_galeri' => $id_galeri);
         $this->m_galeri->delete($data);
@@ -91,6 +91,38 @@ class Galeri extends CI_Controller
     }
 
     public function add_foto($id_galeri)
+    {
+        $this->form_validation->set_rules('ket', 'Caption', 'required');
+        $this->form_validation->set_rules('foto', 'Caption', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $galeri             = $this->m_galeri->detail($id_galeri);
+
+            $data = array(
+                'title'     => 'Galeri',
+                'title2'    => 'Tambah Data Galeri',
+                'galeri'    => $galeri,
+                'foto'      => $this->m_galeri->lists_foto($id_galeri),
+                'isi'       => 'admin/galeri/v_add_foto'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+        } else {
+
+
+            $data = array(
+                'id_galeri' => $id_galeri,
+                'ket'       => $this->input->post('ket'),
+                'foto'      => $this->input->post('foto'),
+
+            );
+
+            $this->m_galeri->add_foto($data);
+            $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
+            redirect('galeri');
+        }
+    }
+
+    public function add_foto1($id_galeri)
     {
         $this->form_validation->set_rules('ket', 'Caption', 'required');
 

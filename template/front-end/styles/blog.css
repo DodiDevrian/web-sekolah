@@ -350,6 +350,7 @@ section
 .header.scrolled .header_content
 {
 	height: 80px;
+	margin-top: 0px;
 }
 
 /*********************************

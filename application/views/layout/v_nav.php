@@ -5,7 +5,8 @@
             <div class="col">
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
                     <div class="logo_container">
-                        <a href="<?= base_url('home') ?>">
+                        <a href="<?= base_url('home') ?>" style="display: flex; align-items: center;">
+                            <img src="<?= base_url() ?>assets/images/logo-man.png" width="50px" height="47.72px" alt="" style="margin-right: 10px;">
                             <div class="logo_text">MAN 1 <span> Lampung Tengah</span></div>
                         </a>
                     </div>

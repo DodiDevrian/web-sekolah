@@ -356,7 +356,13 @@ section
 .header.scrolled .header_content
 {
 	height: 80px;
-	margin-top: 10px;
+}
+
+@media (max-width:400px){
+	.header.scrolled .header_content{
+		height: 80px;
+		margin-top: 40px;
+	}	
 }
 
 /*********************************
@@ -1403,6 +1409,7 @@ section
 	font-family: 'Roboto Slab', serif;
 	font-size: 20px;
 	font-weight: 700;
+	pointer-events: none;
 	line-height: 1.4;
 	color: #384158;
 	-webkit-transition: all 200ms ease;
@@ -1508,6 +1515,7 @@ section
 	font-family: 'Roboto Slab', serif;
 	font-size: 20px;
 	font-weight: 700;
+	pointer-events: none;
 	color: #384158;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
