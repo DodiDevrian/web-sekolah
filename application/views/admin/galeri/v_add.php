@@ -52,7 +52,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Sampul</label>
-                        <input class="form-control" type="file" name="sampul" placeholder="Masukkan Tanggal Pelaksanaan" required>
+                        <input class="form-control" type="text" name="sampul" placeholder="Masukkan ID File Google Drive" required>
                     </div>
                 </div>
                 <div class="col-md-6">

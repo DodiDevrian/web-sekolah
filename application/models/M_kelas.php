@@ -11,6 +11,15 @@ class M_kelas extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function lists_add($id_kelas)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_kelas');
+        $this->db->where('id_kelas', $id_kelas);
+
+        return $this->db->get()->row();
+    }
+
     public function lists_siswa()
     {
         $this->db->select('*');

@@ -18,6 +18,8 @@ class Home extends CI_Controller
             'slider_berita'         => $this->m_home->slider_berita(),
             'berita_terakhir'       => $this->m_home->berita_terakhir(),
             'home_berita_terkini'   => $this->m_home->home_berita_terkini(),
+            'agenda'                => $this->m_home->agenda(),
+            'agenda_slider'                => $this->m_home->agenda_slider(),
             'home_galeri'           => $this->m_home->home_galeri(),
             'events'                => $this->m_home->events(),
             'isi'                   => 'v_home'

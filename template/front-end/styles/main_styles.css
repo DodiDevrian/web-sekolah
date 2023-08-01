@@ -946,7 +946,7 @@ section
 	width: 100%;
 	background: #FFFFFF;
 	padding-top: 93px;
-	padding-bottom: 103px;
+	padding-bottom: 40px;
 }
 .features_row
 {
@@ -1323,8 +1323,8 @@ section
 .events
 {
 	width: 100%;
-	padding-top: 93px;
-	padding-bottom: 70px;
+	padding-top: 20px;
+	padding-bottom: 40px;
 	background: #FFFFFF;
 }
 .events_row
@@ -1445,8 +1445,8 @@ section
 .team
 {
 	width: 100%;
-	padding-top: 93px;
-	padding-bottom: 60px;
+	padding-top: 20px;
+	padding-bottom: 40px;
 }
 .team_background
 {
@@ -1486,7 +1486,7 @@ section
 .team_body
 {
 	width: 100%;
-	height: 300px;
+	height: 250px;
 	padding-top: 108px;
 	padding-bottom: 24px;
 	background: #FFFFFF;
@@ -1575,8 +1575,8 @@ section
 .news
 {
 	width: 100%;
-	padding-top: 93px;
-	padding-bottom: 100px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 	background: #FFFFFF;
 }
 .news_row

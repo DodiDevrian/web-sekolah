@@ -58,7 +58,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Upload Gambar</label>
-                        <input class="form-control" type="file" name="gambar_berita" required>
+                        <input class="form-control" type="text" name="gambar_berita" placeholder="Masukkan ID File Google Drive" required>
                     </div>
                 </div>
                 <div class="col-md-6">

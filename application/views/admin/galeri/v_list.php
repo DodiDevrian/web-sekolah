@@ -28,7 +28,7 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_galeri; ?></td>
                             <td class="text-center">
-                                <img src="<?= base_url('sampul/' . $value->sampul) ?>" width="150" alt="Tidak Ada Foto"><br>
+                                <img src="https://drive.google.com/uc?export=view&id=<?= $value->sampul ?>" width="150" alt="Tidak Ada Foto"><br>
                                 <i class="fa fa-image" style="margin-top: 15px; margin-bottom: 5px;">&nbsp;<?= $value->jml_foto ?> Foto</i><br>
                                 <a href="<?= base_url('galeri/add_foto/' . $value->id_galeri) ?>" class="btn btn-success btn-sm"><i class="fa fa-folder-open"></i> Deatil Foto</a>
                             </td>

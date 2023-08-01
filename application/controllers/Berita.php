@@ -24,6 +24,70 @@ class Berita extends CI_Controller
     {
         $this->form_validation->set_rules('judul_berita', 'Judul Berita', 'required');
         $this->form_validation->set_rules('isi_berita', 'Isi berita', 'required', array('required' => '%s Harus diisi'));
+        $this->form_validation->set_rules('gambar_berita', 'Gambar Berita', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $data = array(
+                'title'         => 'Berita',
+                'title2'        => 'Tambah Data Berita',
+                'isi'           => 'admin/berita/v_add'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+        } else {
+
+
+            $data = array(
+                'judul_berita'  => $this->input->post('judul_berita'),
+                'isi_berita'    => $this->input->post('isi_berita'),
+                'slug_berita'   => url_title($this->input->post('judul_berita'), 'dash', TRUE),
+                'id_user'       => $this->session->userdata('id_user'),
+                'gambar_berita' => $this->input->post('gambar_berita'),
+
+            );
+
+            $this->m_berita->add($data);
+            $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
+            redirect('berita');
+        }
+    }
+
+    public function edit($id_berita)
+    {
+        $this->form_validation->set_rules('judul_berita', 'Judul Berita', 'required');
+        $this->form_validation->set_rules('isi_berita', 'Isi berita', 'required', array('required' => '%s Harus diisi'));
+        $this->form_validation->set_rules('gambar_berita', 'Gambar Berita', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $data = array(
+                'title'         => 'Berita',
+                'title2'        => 'Tambah Data Berita',
+                'berita'        => $this->m_berita->detail($id_berita),
+                'isi'           => 'admin/berita/v_edit'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+        } else {
+
+
+            $data = array(
+                'id_berita'     => $id_berita,
+                'judul_berita'  => $this->input->post('judul_berita'),
+                'isi_berita'    => $this->input->post('isi_berita'),
+                'slug_berita'   => url_title($this->input->post('judul_berita'), 'dash', TRUE),
+                'id_user'       => $this->session->userdata('id_user'),
+                'gambar_berita' => $this->input->post('gambar_berita'),
+
+            );
+
+            $this->m_berita->edit($data);
+            $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
+            redirect('berita');
+        }
+    }
+
+    public function add1()
+    {
+        $this->form_validation->set_rules('judul_berita', 'Judul Berita', 'required');
+        $this->form_validation->set_rules('isi_berita', 'Isi berita', 'required', array('required' => '%s Harus diisi'));
 
 
         if ($this->form_validation->run() == TRUE) {
@@ -70,7 +134,7 @@ class Berita extends CI_Controller
         $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
 
-    public function edit($id_berita)
+    public function edit1($id_berita)
     {
         $this->form_validation->set_rules('judul_berita', 'Judul Berita', 'required');
         $this->form_validation->set_rules('isi_berita', 'Isi berita', 'required', array('required' => '%s Harus diisi'));
@@ -143,10 +207,10 @@ class Berita extends CI_Controller
     public function delete($id_berita)
     {
         // Hapus file foto yang lama
-        $berita = $this->m_berita->detail($id_berita);
-        if ($berita->gambar_berita != "") {
-            unlink('./gambar_berita/' . $berita->gambar_berita);
-        }
+        // $berita = $this->m_berita->detail($id_berita);
+        // if ($berita->gambar_berita != "") {
+        //     unlink('./gambar_berita/' . $berita->gambar_berita);
+        // }
 
         $data = array('id_berita' => $id_berita);
         $this->m_berita->delete($data);

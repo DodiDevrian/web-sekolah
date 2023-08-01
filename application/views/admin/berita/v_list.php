@@ -31,7 +31,7 @@
                             <td><?= $value->judul_berita; ?></td>
                             <td><?= $value->tgl_berita; ?></td>
                             <td><?= $value->nama_user; ?></td>
-                            <td><img src="<?= base_url('gambar_berita/' . $value->gambar_berita) ?>" width="50"></td>
+                            <td><img src="https://drive.google.com/uc?export=view&id=<?= $value->gambar_berita ?>" width="50"></td>
                             <td>
                                 <a href="<?= base_url('berita/edit/' . $value->id_berita) ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil" data-toggle="modal" data-target="#myModal<?= $value->id_berita; ?>"></i></a>
                                 <a href="<?= base_url('berita/delete/' . $value->id_berita) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>

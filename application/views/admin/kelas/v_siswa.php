@@ -20,7 +20,7 @@
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading text-right">
-            <a href="<?= base_url() ?>siswa/add" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add</a>
+            <a href="<?= base_url('kelas/add_siswa/' . $this->uri->segment(3)) ?> " type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add</a>
         </div>
         <div class="panel-body">
             <?php
@@ -56,10 +56,10 @@
                                 <td><?= $value->tempat_lahir; ?>, <?= $value->tgl_lahir; ?></td>
                                 <td><?= $value->kelas; ?></td>
                                 <td><?= $value->angkatan; ?></td>
-                                <td><img src="<?= base_url('foto_siswa/') . $value->foto_siswa; ?>" width="50"></td>
+                                <td><img src="https://drive.google.com/uc?export=view&id=<?= $value->foto_siswa ?>" width="50"></td>
                                 <td>
-                                    <a href="<?= base_url('siswa/edit/' . $value->id_siswa) ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil" data-toggle="modal" data-target="#myModal<?= $value->id_siswa; ?>"></i></a>
-                                    <a href="<?= base_url('siswa/delete/' . $value->id_siswa) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a href="<?= base_url('kelas/edit_siswa/' . $value->id_siswa) ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil" data-toggle="modal" data-target="#myModal<?= $value->id_siswa; ?>"></i></a>
+                                    <a href="<?= base_url('kelas/delete_siswa/' . $value->id_siswa) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                     <?php }

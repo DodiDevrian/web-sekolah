@@ -24,108 +24,57 @@ class Galeri extends CI_Controller
     {
         $this->form_validation->set_rules('nama_galeri', 'Nama Galeri', 'required');
 
-        if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './sampul/';
-            $config['allowed_types']    = 'gif|jpg|png|jpeg';
-            $config['max_size']         = 2000;
-            $this->upload->initialize($config);
+        if ($this->form_validation->run() == FALSE) {
+            $data = array(
+                'title'         => 'Galeri',
+                'title2'        => 'Tambah Data Galeri',
+                'isi'           => 'admin/galeri/v_add'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+        } else {
 
-            if (!$this->upload->do_upload('sampul')) {
 
-                $data = array(
-                    'title'     => 'Galeri',
-                    'title2'    => 'Tambah Data Galeri',
-                    'error'     => $this->upload->display_errors(),
-                    'isi'       => 'admin/galeri/v_add'
-                );
-                $this->load->view('admin/layout/v_wrapper', $data, FALSE);
-            } else {
-                $upload_data = array('uploads' => $this->upload->data());
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = './sampul/' . $upload_data['uploads']['file_name'];
-                $this->load->library('image_lib', $config);
+            $data = array(
+                'nama_galeri'  => $this->input->post('nama_galeri'),
+                'sampul'       => $this->input->post('sampul')
 
-                $data = array(
-                    'nama_galeri'  => $this->input->post('nama_galeri'),
-                    'sampul' => $upload_data['uploads']['file_name']
-                );
+            );
 
-                $this->m_galeri->add($data);
-                $this->session->flashdata('pesan', 'Galeri Berhasil Ditambahkan!');
-                redirect('galeri');
-            }
+            $this->m_galeri->add($data);
+            $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
+            redirect('galeri');
         }
-
-
-        $data = array(
-            'title'         => 'galeri',
-            'title2'        => 'Tambah Data Galeri',
-            'isi'           => 'admin/galeri/v_add'
-        );
-        $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
 
     public function edit($id_galeri)
     {
         $this->form_validation->set_rules('nama_galeri', 'Nama Galeri', 'required');
 
-        if ($this->form_validation->run() == TRUE) {
-            $config['upload_path']      = './sampul/';
-            $config['allowed_types']    = 'gif|jpg|png|jpeg';
-            $config['max_size']         = 2000;
-            $this->upload->initialize($config);
-
-            if (!$this->upload->do_upload('sampul')) {
-
-                $data = array(
-                    'title'     => 'Galeri',
-                    'title2'    => 'Ubah Data Galeri',
-                    'error'     => $this->upload->display_errors(),
-                    'galeri'    => $this->m_galeri->detail($id_galeri),
-                    'isi'       => 'admin/galeri/v_edit'
-                );
-                $this->load->view('admin/layout/v_wrapper', $data, FALSE);
-            } else {
-                $upload_data = array('uploads' => $this->upload->data());
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = './sampul/' . $upload_data['uploads']['file_name'];
-                $this->load->library('image_lib', $config);
-
-                // Hapus file foto yang lama
-                $galeri = $this->m_galeri->detail($id_galeri);
-                if ($galeri->sampul != "") {
-                    unlink('./sampul/' . $galeri->sampul);
-                }
-
-                $data = array(
-                    'id_galeri'     => $id_galeri,
-                    'nama_galeri'   => $this->input->post('nama_galeri'),
-                    'sampul'        => $upload_data['uploads']['file_name']
-                );
-
-                $this->m_galeri->edit($data);
-                $this->session->flashdata('pesan', 'Galeri Berhasil Diubah!');
-                redirect('galeri');
-            }
+        if ($this->form_validation->run() == FALSE) {
             $data = array(
-                'id_galeri' => $id_galeri,
-                'nama_galeri'  => $this->input->post('nama_galeri')
+                'title'         => 'Galeri',
+                'title2'        => 'Tambah Data Galeri',
+                'galeri'        => $this->m_galeri->detail($id_galeri),
+                'isi'           => 'admin/galeri/v_edit'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+        } else {
+
+
+            $data = array(
+                'id_galeri'    => $id_galeri,
+                'nama_galeri'  => $this->input->post('nama_galeri'),
+                'sampul'       => $this->input->post('sampul')
+
             );
 
             $this->m_galeri->edit($data);
-            $this->session->flashdata('pesan', 'Galeri Berhasil Diubah!');
+            $this->session->set_flashdata('pesan', 'Data Berhasil Diubah!');
             redirect('galeri');
         }
-
-
-        $data = array(
-            'title'         => 'galeri',
-            'title2'        => 'Ubah Data Galeri',
-            'galeri'    => $this->m_galeri->detail($id_galeri),
-            'isi'           => 'admin/galeri/v_edit'
-        );
-        $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
+
+
 
     public function delete($id_galeri)
     {
@@ -204,4 +153,111 @@ class Galeri extends CI_Controller
         $this->session->flashdata('pesan', 'Foto Berhasil Dihapus!');
         redirect('galeri/add_foto/' . $id_galeri);
     }
+
+    // public function add1()
+    // {
+    //     $this->form_validation->set_rules('nama_galeri', 'Nama Galeri', 'required');
+
+    //     if ($this->form_validation->run() == TRUE) {
+    //         $config['upload_path']      = './sampul/';
+    //         $config['allowed_types']    = 'gif|jpg|png|jpeg';
+    //         $config['max_size']         = 2000;
+    //         $this->upload->initialize($config);
+
+    //         if (!$this->upload->do_upload('sampul')) {
+
+    //             $data = array(
+    //                 'title'     => 'Galeri',
+    //                 'title2'    => 'Tambah Data Galeri',
+    //                 'error'     => $this->upload->display_errors(),
+    //                 'isi'       => 'admin/galeri/v_add'
+    //             );
+    //             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+    //         } else {
+    //             $upload_data = array('uploads' => $this->upload->data());
+    //             $config['image_library'] = 'gd2';
+    //             $config['source_image'] = './sampul/' . $upload_data['uploads']['file_name'];
+    //             $this->load->library('image_lib', $config);
+
+    //             $data = array(
+    //                 'nama_galeri'  => $this->input->post('nama_galeri'),
+    //                 'sampul' => $upload_data['uploads']['file_name']
+    //             );
+
+    //             $this->m_galeri->add($data);
+    //             $this->session->flashdata('pesan', 'Galeri Berhasil Ditambahkan!');
+    //             redirect('galeri');
+    //         }
+    //     }
+
+
+    //     $data = array(
+    //         'title'         => 'galeri',
+    //         'title2'        => 'Tambah Data Galeri',
+    //         'isi'           => 'admin/galeri/v_add'
+    //     );
+    //     $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+    // }
+
+    // public function edit1($id_galeri)
+    // {
+    //     $this->form_validation->set_rules('nama_galeri', 'Nama Galeri', 'required');
+
+    //     if ($this->form_validation->run() == TRUE) {
+    //         $config['upload_path']      = './sampul/';
+    //         $config['allowed_types']    = 'gif|jpg|png|jpeg';
+    //         $config['max_size']         = 2000;
+    //         $this->upload->initialize($config);
+
+    //         if (!$this->upload->do_upload('sampul')) {
+
+    //             $data = array(
+    //                 'title'     => 'Galeri',
+    //                 'title2'    => 'Ubah Data Galeri',
+    //                 'error'     => $this->upload->display_errors(),
+    //                 'galeri'    => $this->m_galeri->detail($id_galeri),
+    //                 'isi'       => 'admin/galeri/v_edit'
+    //             );
+    //             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+    //         } else {
+    //             $upload_data = array('uploads' => $this->upload->data());
+    //             $config['image_library'] = 'gd2';
+    //             $config['source_image'] = './sampul/' . $upload_data['uploads']['file_name'];
+    //             $this->load->library('image_lib', $config);
+
+    //             // Hapus file foto yang lama
+    //             $galeri = $this->m_galeri->detail($id_galeri);
+    //             if ($galeri->sampul != "") {
+    //                 unlink('./sampul/' . $galeri->sampul);
+    //             }
+
+    //             $data = array(
+    //                 'id_galeri'     => $id_galeri,
+    //                 'nama_galeri'   => $this->input->post('nama_galeri'),
+    //                 'sampul'        => $upload_data['uploads']['file_name']
+    //             );
+
+    //             $this->m_galeri->edit($data);
+    //             $this->session->flashdata('pesan', 'Galeri Berhasil Diubah!');
+    //             redirect('galeri');
+    //         }
+    //         $data = array(
+    //             'id_galeri' => $id_galeri,
+    //             'nama_galeri'  => $this->input->post('nama_galeri')
+    //         );
+
+    //         $this->m_galeri->edit($data);
+    //         $this->session->flashdata('pesan', 'Galeri Berhasil Diubah!');
+    //         redirect('galeri');
+    //     }
+
+
+    //     $data = array(
+    //         'title'         => 'galeri',
+    //         'title2'        => 'Ubah Data Galeri',
+    //         'galeri'    => $this->m_galeri->detail($id_galeri),
+    //         'isi'           => 'admin/galeri/v_edit'
+    //     );
+    //     $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+    // }
 }

@@ -35,7 +35,7 @@
                     if ($value->id_kelas == $id) { ?>
                         <div class="col-lg-3 col-md-6 team_col">
                             <div class="team_item">
-                                <div class="team_image"><img src="<?= base_url('foto_siswa/') . $value->foto_siswa ?>" alt=""></div>
+                                <div class="team_image"><img src="https://drive.google.com/uc?export=view&id=<?= $value->foto_siswa ?>" alt=""></div>
                                 <div class="team_body">
                                     <div class="team_title" style="margin-bottom: 50px;"><a href="#"><?= $value->nama_siswa ?></a></div>
                                     <div class="team_subtitle"></div>

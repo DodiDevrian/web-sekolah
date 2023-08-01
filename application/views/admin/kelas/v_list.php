@@ -31,7 +31,7 @@
                             <td><?= $value->kelas; ?></td>
                             <td><?= $value->angkatan; ?></td>
                             <td><?= $value->moto; ?></td>
-                            <td><img src="<?= base_url('logo/') . $value->logo ?>" width="50"></td>
+                            <td><img src="https://drive.google.com/uc?export=view&id=<?= $value->logo ?>" width="50"></td>
                             <td>
                                 <a href="<?= base_url('kelas/siswa/' . $value->id_kelas) ?>" class="btn btn-primary btn-sm"><i class="fa fa-users"></i> Lihat Siswa</a>
                                 <a href="<?= base_url('kelas/edit/' . $value->id_kelas) ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>

@@ -91,7 +91,7 @@
 
             <div class="form-group">
                 <label>Logo</label>
-                <input class="form-control" type="file" name="logo" placeholder="Masukkan Tempat Lahir" required>
+                <input class="form-control" type="text" name="logo" placeholder="Masukkan ID File Dari Google Drive" required>
             </div>
 
             <div class="form-group text-center">

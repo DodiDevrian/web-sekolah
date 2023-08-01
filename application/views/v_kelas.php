@@ -35,7 +35,7 @@
                 ?>
                     <div class="col-lg-3 col-md-6 team_col">
                         <div class="team_item">
-                            <div class="team_image"><img src="<?= base_url('logo/') . $value->logo ?>" alt=""></div>
+                            <div class="team_image"><img src="https://drive.google.com/uc?export=view&id=<?= $value->logo ?>" alt=""></div>
                             <div class="team_body">
                                 <div class="team_title"><a href="<?= base_url('home/siswa/' . $value->id_kelas) ?>"><?= $value->kelas ?></a></div>
                                 <div class="team_subtitle">Angkatan : <?= $value->angkatan ?></div>
@@ -44,7 +44,7 @@
                                     <ul>
                                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

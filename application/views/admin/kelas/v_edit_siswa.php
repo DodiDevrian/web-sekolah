@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
 <link href="<?= base_url() ?>/template/back-end/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- MetisMenu CSS -->
@@ -21,51 +23,77 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="<?= base_url() ?>/datepicker/css/datepicker.css">
+<style>
+    .datepicker {
+        z-index: 1151;
+    }
+</style>
 
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            Edit Galeri
+            Ubah Data Siswa
         </div>
         <div class="panel-body">
             <?php
+
+            echo validation_errors('<div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>', '</div>');
+
             if (isset($error_upload)) {
                 echo '<div class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' . $error_upload . '</div>';
             }
 
-            echo form_open_multipart('galeri/edit/' . $galeri->id_galeri);
+            echo form_open_multipart('kelas/edit_siswa/' . $siswa->id_siswa);
             ?>
 
             <div class="form-group">
-                <label>Nama Galeri</label>
-                <input class="form-control" type="text" name="nama_galeri" value="<?= $galeri->nama_galeri ?>" placeholder="Masukkan Nama Galeri" required>
+                <label>NIS</label>
+                <input class="form-control" type="text" name="nis" value="<?= $siswa->nis ?>" placeholder="Masukkan NIS" required>
+            </div>
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input class="form-control" type="text" name="nama_siswa" value="<?= $siswa->nama_siswa ?>" placeholder="Masukkan Nama Lengkap" required>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Ganti Sampul</label>
-                                <input class="form-control" type="text" value="<?= $galeri->sampul ?>" name="sampul">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Sampul Saat Ini</label><br>
-                                <img src="<?= base_url('sampul/' . $galeri->sampul) ?>" width="100">
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label>Tempat Lahir</label>
+                        <input class="form-control" type="text" name="tempat_lahir" value="<?= $siswa->tempat_lahir ?>" placeholder="Masukkan Tempat Lahir" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input id="tanggal" class="form-control" type="text" name="tgl_lahir" value="<?= $siswa->tgl_lahir ?>" placeholder="Masukkan Tanggal Lahir" required>
                     </div>
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group search_select_box">
+                        <label>Kelas</label>
+                        <select name="id_kelas" class="form-control" data-live-search="true">
+                            <option value="<?= $siswa->id_kelas ?>"><?= $siswa->kelas ?> Angkatan <?= $siswa->angkatan ?></option>
+                            <?php foreach ($kelas as $key => $value) { ?>
+                                <option value="<?= $value->id_kelas ?>"><?= $value->kelas ?> Angkatan <?= $value->angkatan ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Foto Siswa</label>
+                        <input class="form-control" type="text" name="foto_siswa" value="<?= $siswa->foto_siswa ?>" placeholder="Masukkan Tempat Lahir">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="reset" class="btn btn-danger">Bersihkan</button>
             </div>
@@ -99,6 +127,16 @@
 <script src="<?= base_url() ?>/datepicker/js/bootstrap-transition.js"></script>
 <script src="<?= base_url() ?>/datepicker/js/bootstrap-datepicker.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(function() {
+        $("#tanggal").datepicker({
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
+
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
     $(document).ready(function() {
@@ -106,4 +144,10 @@
             responsive: true
         });
     });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.search_select_box select').selectpicker();
+    })
 </script>

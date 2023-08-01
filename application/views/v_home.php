@@ -11,6 +11,114 @@
 
         <!-- Home Slider -->
         <div class="owl-carousel owl-theme home_slider">
+            <?php foreach ($agenda_slider as $key => $value) { ?>
+                <?php
+                $tgl_mulai = $value->tgl_mulai;
+                switch (date('m', strtotime($tgl_mulai))) {
+                    case '01':
+                        $bulan = 'Jan';
+                        break;
+                    case '02':
+                        $bulan = 'Feb';
+                        break;
+                    case '03':
+                        $bulan = 'Mar';
+                        break;
+                    case '04':
+                        $bulan = 'Apr';
+                        break;
+                    case '05':
+                        $bulan = 'Mei';
+                        break;
+                    case '06':
+                        $bulan = 'Jun';
+                        break;
+                    case '07':
+                        $bulan = 'Jul';
+                        break;
+                    case '08':
+                        $bulan = 'Aug';
+                        break;
+                    case '09':
+                        $bulan = 'Sep';
+                        break;
+                    case '10':
+                        $bulan = 'Okt';
+                        break;
+                    case '11':
+                        $bulan = 'Nov';
+                        break;
+                    case '12':
+                        $bulan = 'Des';
+                        break;
+
+                    default:
+                        $bulan = 'Bulan Tidak Diketahi';
+                        break;
+                } ?>
+
+                <?php
+                $tgl_akhir = $value->tgl_akhir;
+                switch (date('m', strtotime($tgl_akhir))) {
+                    case '01':
+                        $bulan2 = 'Jan';
+                        break;
+                    case '02':
+                        $bulan2 = 'Feb';
+                        break;
+                    case '03':
+                        $bulan2 = 'Mar';
+                        break;
+                    case '04':
+                        $bulan2 = 'Apr';
+                        break;
+                    case '05':
+                        $bulan2 = 'Mei';
+                        break;
+                    case '06':
+                        $bulan2 = 'Jun';
+                        break;
+                    case '07':
+                        $bulan2 = 'Jul';
+                        break;
+                    case '08':
+                        $bulan2 = 'Aug';
+                        break;
+                    case '09':
+                        $bulan2 = 'Sep';
+                        break;
+                    case '10':
+                        $bulan2 = 'Okt';
+                        break;
+                    case '11':
+                        $bulan2 = 'Nov';
+                        break;
+                    case '12':
+                        $bulan2 = 'Des';
+                        break;
+
+                    default:
+                        $bulan2 = 'Bulan Tidak Diketahi';
+                        break;
+                } ?>
+                <div class="owl-item">
+                    <div class="home_slider_background" style="background-image:url(<?= base_url('foto_agenda/' . $value->foto_agenda) ?>"></div>
+                    <div class="home_slider_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center" style="background: rgba(255,255,255,0.6); border-radius: 10px;">
+                                    <div><a href="<?= $value->link ?>" class="home_slider_title"><?= $value->nama_agenda ?></a></div>
+                                    <div style="margin-top: 20px; font-family: 'Roboto Slab', serif;" class="home_slider_subtitle"><?= date("d", strtotime($tgl_mulai)) . ' ' . $bulan; ?> - <?= date("d", strtotime($tgl_akhir)) . ' ' . $bulan2 . ' ' . date('Y', strtotime($tgl_akhir)); ?></div>
+                                    <div style="margin-top: 20px; font-family: 'Roboto Slab', serif;" class="home_slider_subtitle"><?= $value->keterangan ?></div>
+                                    <div class="home_slider_form_container">
+                                        <a href="<?= $value->link ?>" target="_blank" class="btn btn-primary" style="margin-bottom: 20px;">Daftar PPDB</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
 
             <?php foreach ($slider_berita as $key => $value) {
                 $tanggal = $value->tgl_berita;
@@ -83,7 +191,7 @@
     <div class="home_slider_nav home_slider_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
 </div>
 
-<!-- Slogan -->
+<!-- Agenda -->
 
 <div class="features">
     <div class="container">
@@ -98,45 +206,119 @@
             </div>
         </div>
         <div class="row features_row">
-            <div class="col-lg-3 feature_col">
-                <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon1.png" alt="" width="80"></div>
-                    <h3 class="feature_title" style="margin-top: 30px;">Berkualitas</h3>
-                    <div class="feature_text">
-                        <p>Menjadi Lulusan Yang Berkualitas</p>
-                    </div>
-                </div>
-            </div>
+            <?php foreach ($agenda as $key => $value) { ?>
+                <?php
+                $tgl_mulai = $value->tgl_mulai;
+                switch (date('m', strtotime($tgl_mulai))) {
+                    case '01':
+                        $bulan = 'Jan';
+                        break;
+                    case '02':
+                        $bulan = 'Feb';
+                        break;
+                    case '03':
+                        $bulan = 'Mar';
+                        break;
+                    case '04':
+                        $bulan = 'Apr';
+                        break;
+                    case '05':
+                        $bulan = 'Mei';
+                        break;
+                    case '06':
+                        $bulan = 'Jun';
+                        break;
+                    case '07':
+                        $bulan = 'Jul';
+                        break;
+                    case '08':
+                        $bulan = 'Aug';
+                        break;
+                    case '09':
+                        $bulan = 'Sep';
+                        break;
+                    case '10':
+                        $bulan = 'Okt';
+                        break;
+                    case '11':
+                        $bulan = 'Nov';
+                        break;
+                    case '12':
+                        $bulan = 'Des';
+                        break;
 
-            <div class="col-lg-3 feature_col">
-                <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon2.png" alt="" width="80"></div>
-                    <h3 class="feature_title" style="margin-top: 30px;">Kompetitif</h3>
-                    <div class="feature_text">
-                        <p>Menciptakan Jiwa Kompetitif Sehingga Dapat Bersaing Dengan Sekolah Lain</p>
-                    </div>
-                </div>
-            </div>
+                    default:
+                        $bulan = 'Bulan Tidak Diketahi';
+                        break;
+                } ?>
 
-            <div class="col-lg-3 feature_col">
-                <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon3.png" alt="" width="80"></div>
-                    <h3 class="feature_title" style="margin-top: 30px;">Islami</h3>
-                    <div class="feature_text">
-                        <p>Menjadikan Agama Islam Sebagai Pondasi Kehidupan</p>
-                    </div>
-                </div>
-            </div>
+                <?php
+                $tgl_akhir = $value->tgl_akhir;
+                switch (date('m', strtotime($tgl_akhir))) {
+                    case '01':
+                        $bulan2 = 'Jan';
+                        break;
+                    case '02':
+                        $bulan2 = 'Feb';
+                        break;
+                    case '03':
+                        $bulan2 = 'Mar';
+                        break;
+                    case '04':
+                        $bulan2 = 'Apr';
+                        break;
+                    case '05':
+                        $bulan2 = 'Mei';
+                        break;
+                    case '06':
+                        $bulan2 = 'Jun';
+                        break;
+                    case '07':
+                        $bulan2 = 'Jul';
+                        break;
+                    case '08':
+                        $bulan2 = 'Aug';
+                        break;
+                    case '09':
+                        $bulan2 = 'Sep';
+                        break;
+                    case '10':
+                        $bulan2 = 'Okt';
+                        break;
+                    case '11':
+                        $bulan2 = 'Nov';
+                        break;
+                    case '12':
+                        $bulan2 = 'Des';
+                        break;
 
-            <div class="col-lg-3 feature_col">
-                <div class="feature text-center trans_400">
-                    <div class="feature_icon"><img src="<?php base_url() ?>assets/images/icon4.png" alt="" width="80"></div>
-                    <h3 class="feature_title" style="margin-top: 30px;">Bermartabat</h3>
-                    <div class="feature_text">
-                        <p>Rukun Terhadap Sesama Manusia</p>
+                    default:
+                        $bulan2 = 'Bulan Tidak Diketahi';
+                        break;
+                } ?>
+                <div class="col-lg-4 event_col">
+                    <div class="event event_left">
+                        <div class="event_image"><img src="<?= base_url('foto_agenda/') . $value->foto_agenda ?>" alt="" style="width: 100%; height: 223px; object-fit: cover; object-position: 20% 10%;"></div>
+                        <div class="event_body d-flex flex-row align-items-start justify-content-start">
+                            <div class="event_date">
+                                <div class="d-flex flex-column align-items-center justify-content-center trans_200">
+                                    <div class="event_day trans_200"><?= date('d', strtotime($tgl_mulai)) ?></div>
+                                    <div class="event_month trans_200"><?= $bulan ?></div>
+                                </div>
+                            </div>
+                            <div class="event_content">
+                                <div class="event_title"><a href="<?= $value->link ?>" target="_blank"><?= $value->nama_agenda ?></a></div>
+                                <div class="event_info_container">
+                                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span><?= date("d", strtotime($tgl_mulai)) . ' ' . $bulan; ?> - <?= date("d", strtotime($tgl_akhir)) . ' ' . $bulan2 . ' ' . date('Y', strtotime($tgl_akhir)); ?></span></div>
+                                    <div class="event_text">
+                                        <p><?= $value->keterangan ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>

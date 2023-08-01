@@ -88,7 +88,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Foto Siswa</label>
-                        <input class="form-control" type="file" name="foto_siswa" placeholder="Masukkan Tempat Lahir">
+                        <input class="form-control" type="text" name="foto_siswa" value="<?= $siswa->foto_siswa ?>" placeholder="Masukkan ID File Dari Google Drive" required>
                     </div>
                 </div>
             </div>

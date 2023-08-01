@@ -11,6 +11,25 @@ class M_home extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function agenda()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_agenda');
+        $this->db->order_by('id_agenda', 'ASC');
+
+        return $this->db->get()->result();
+    }
+
+    public function agenda_slider()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_agenda');
+        $this->db->order_by('id_agenda', 'ASC');
+        $this->db->limit(1);
+
+        return $this->db->get()->result();
+    }
+
     public function guru()
     {
         $this->db->select('*');

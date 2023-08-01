@@ -63,7 +63,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label>Ubah Gambar</label>
-                            <input class="form-control" type="file" name="gambar_berita">
+                            <input class="form-control" type="text" name="gambar_berita" value="<?= $berita->gambar_berita ?>" placeholder="Masukkan ID File Google Drive" required>
                         </div>
                         <div class="form-group col-md-6">
                         </div>

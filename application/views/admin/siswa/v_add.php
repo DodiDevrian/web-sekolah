@@ -1,21 +1,21 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-<link href="../template/back-end/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?= base_url() ?>/template/back-end/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- MetisMenu CSS -->
-<link href="../template/back-end/css/metisMenu.min.css" rel="stylesheet">
+<link href="<?= base_url() ?>/template/back-end/css/metisMenu.min.css" rel="stylesheet">
 
 <!-- DataTables CSS -->
-<link href="../template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+<link href="<?= base_url() ?>/template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- DataTables Responsive CSS -->
-<link href="../template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+<link href="<?= base_url() ?>/template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="../template/back-end/css/startmin.css" rel="stylesheet">
+<link href="<?= base_url() ?>/template/back-end/css/startmin.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="../template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="<?= base_url() ?>/template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,7 +84,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Foto Siswa</label>
-                        <input class="form-control" type="file" name="foto_siswa" placeholder="Masukkan Tempat Lahir" required>
+                        <input class="form-control" type="text" name="foto_siswa" placeholder="Masukkan ID File Dari Google Drive" required>
                     </div>
                 </div>
             </div>
