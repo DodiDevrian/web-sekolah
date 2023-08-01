@@ -26,10 +26,7 @@ class Guru extends CI_Controller
     {
         $this->form_validation->set_rules('nip', 'NIP', 'required');
         $this->form_validation->set_rules('nama_guru', 'Nama Lengkap', 'required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
         $this->form_validation->set_rules('id_mapel', 'Mata Pelajaran', 'required');
-        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto_guru/';
@@ -56,10 +53,7 @@ class Guru extends CI_Controller
                 $data = array(
                     'nip'           => $this->input->post('nip'),
                     'nama_guru'     => $this->input->post('nama_guru'),
-                    'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                    'tgl_lahir'     => $this->input->post('tgl_lahir'),
                     'id_mapel'      => $this->input->post('id_mapel'),
-                    'pendidikan'    => $this->input->post('pendidikan'),
                     'foto_guru'     => $upload_data['uploads']['file_name']
                 );
 
@@ -81,10 +75,7 @@ class Guru extends CI_Controller
     {
         $this->form_validation->set_rules('nip', 'NIP', 'required');
         $this->form_validation->set_rules('nama_guru', 'Nama Lengkap', 'required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
         $this->form_validation->set_rules('id_mapel', 'Mata Pelajaran', 'required');
-        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto_guru/';
@@ -119,10 +110,7 @@ class Guru extends CI_Controller
                     'id_guru'       => $id_guru,
                     'nip'           => $this->input->post('nip'),
                     'nama_guru'     => $this->input->post('nama_guru'),
-                    'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                    'tgl_lahir'     => $this->input->post('tgl_lahir'),
                     'id_mapel'      => $this->input->post('id_mapel'),
-                    'pendidikan'    => $this->input->post('pendidikan'),
                     'foto_guru'     => $upload_data['uploads']['file_name']
                 );
 
@@ -139,10 +127,7 @@ class Guru extends CI_Controller
                 'id_guru'       => $id_guru,
                 'nip'           => $this->input->post('nip'),
                 'nama_guru'     => $this->input->post('nama_guru'),
-                'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                'tgl_lahir'     => $this->input->post('tgl_lahir'),
                 'id_mapel'      => $this->input->post('id_mapel'),
-                'pendidikan'    => $this->input->post('pendidikan'),
             );
 
             $this->m_guru->edit($data);

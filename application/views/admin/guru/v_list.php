@@ -18,9 +18,7 @@
                         <th>No</th>
                         <th>NIP</th>
                         <th>Nama</th>
-                        <th>Tempat Tanggal Lahir</th>
                         <th>Mata Pelajaran</th>
-                        <th>Pendidikan</th>
                         <th>Foto</th>
                         <th>Action</th>
                     </tr>
@@ -32,9 +30,7 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nip; ?></td>
                             <td><?= $value->nama_guru; ?></td>
-                            <td><?= $value->tempat_lahir; ?>, <?= $value->tgl_lahir; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
-                            <td><?= $value->pendidikan; ?></td>
                             <td><img src="<?= base_url('foto_guru/') . $value->foto_guru ?>" width="50"></td>
                             <td>
                                 <a href="<?= base_url('guru/edit/' . $value->id_guru) ?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>

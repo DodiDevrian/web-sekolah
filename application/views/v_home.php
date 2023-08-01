@@ -627,7 +627,7 @@
                 <div class="section_title_container text-center">
                     <img src="<?= base_url('assets/images/logordm.png') ?>" alt="">
                     <h2 class="section_title">Rapor Digital Madrasah MAN 1 Lampung Tengah</h2>
-                    <h4 style="margin-top: 50px; margin-bottom: 20px;">hanya untuk guru MAN 1 Lampung Tengah bukan untuk siswa</h4>
+                    <h4 style="margin-top: 50px; margin-bottom: 20px;">Hanya untuk guru MAN 1 Lampung Tengah bukan untuk siswa</h4>
                     <a href="https://man1lampungtengah.my.id/" class="btn btn-success">Klick disini</a>
                 </div>
             </div>

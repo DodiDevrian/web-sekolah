@@ -25,10 +25,7 @@ class Pegawai extends CI_Controller
     {
         $this->form_validation->set_rules('nip', 'NIP', 'required');
         $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
-        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto_pegawai/';
@@ -54,10 +51,7 @@ class Pegawai extends CI_Controller
                 $data = array(
                     'nip'           => $this->input->post('nip'),
                     'nama'     => $this->input->post('nama'),
-                    'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                    'tgl_lahir'     => $this->input->post('tgl_lahir'),
                     'jabatan'      => $this->input->post('jabatan'),
-                    'pendidikan'    => $this->input->post('pendidikan'),
                     'foto_pegawai'     => $upload_data['uploads']['file_name']
                 );
 
@@ -78,10 +72,7 @@ class Pegawai extends CI_Controller
     {
         $this->form_validation->set_rules('nip', 'NIP', 'required');
         $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required');
-        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'required');
-        $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required');
         $this->form_validation->set_rules('jabatan', 'Jabatan', 'required');
-        $this->form_validation->set_rules('pendidikan', 'Pendidikan', 'required');
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path']      = './foto_pegawai/';
@@ -115,10 +106,7 @@ class Pegawai extends CI_Controller
                     'id_pegawai'       => $id_pegawai,
                     'nip'           => $this->input->post('nip'),
                     'nama'     => $this->input->post('nama'),
-                    'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                    'tgl_lahir'     => $this->input->post('tgl_lahir'),
                     'jabatan'      => $this->input->post('jabatan'),
-                    'pendidikan'    => $this->input->post('pendidikan'),
                     'foto_pegawai'     => $upload_data['uploads']['file_name']
                 );
 
@@ -135,10 +123,7 @@ class Pegawai extends CI_Controller
                 'id_pegawai'       => $id_pegawai,
                 'nip'           => $this->input->post('nip'),
                 'nama'     => $this->input->post('nama'),
-                'tempat_lahir'  => $this->input->post('tempat_lahir'),
-                'tgl_lahir'     => $this->input->post('tgl_lahir'),
                 'jabatan'      => $this->input->post('jabatan'),
-                'pendidikan'    => $this->input->post('pendidikan'),
             );
 
             $this->m_pegawai->edit($data);
