@@ -368,7 +368,6 @@
 </div>
 
 <!-- Events -->
-
 <div class="events">
     <div class="container">
         <div class="row">
@@ -376,7 +375,7 @@
                 <div class="section_title_container text-center">
                     <h2 class="section_title">Events</h2>
                     <div class="section_subtitle">
-                        <p>3 Event Terdekat Akan Ditampilkan Di Sini</p>
+                        <p>3 Event Terbesar Madrasah Akan Ditampilkan Di Sini</p>
                     </div>
                 </div>
             </div>
