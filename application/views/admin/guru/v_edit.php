@@ -66,7 +66,6 @@
                     <?php foreach ($mapel as $key => $value) { ?>
                         <option value="<?= $value->id_mapel;  ?>"><?= $value->nama_mapel;  ?></option>
                     <?php } ?>
-
                 </select>
             </div>
 
