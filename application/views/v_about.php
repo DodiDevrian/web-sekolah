@@ -51,7 +51,6 @@
         <div class="contact_info_container" style="margin-top: 20px;">
             <div class="container">
                 <div class="row">
-                    <!-- Contact Form -->
                     <div class="col-lg-4">
                         <div class="contact_form text-center">
                             <div class="contact_info_title" style="margin-bottom: 20px;">Kepala Sekolah</div>
@@ -60,8 +59,6 @@
                             <p><?= $value->nip_kepsek ?></p>
                         </div>
                     </div>
-
-                    <!-- Contact Info -->
                     <div class="col-lg-8">
                         <div class="contact_info">
                             <div class="contact_info_title">Info Sekolah</div>
