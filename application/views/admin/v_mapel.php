@@ -1,7 +1,7 @@
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading text-right">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add</button>
+            <button type="button" class="btn btn-success" style="margin-bottom: 15px;" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add</button>
         </div>
         <div class="panel-body">
             <?php
@@ -12,7 +12,7 @@
                 echo '</div>';
             }
             ?>
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover" id="example">
                 <thead>
                     <tr>
                         <th style="width: 50px;">No</th>
@@ -27,7 +27,7 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
                             <td>
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal<?= $value->id_mapel; ?>"><i class="fa fa-pencil"></i> Edit</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal<?= $value->id_mapel; ?>"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="<?= base_url('mapel/delete/' . $value->id_mapel) ?>" onclick="return confirm('Apakah Yakin Ingin Menghapus Data ?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>&nbsp;&nbsp;Hapus</a>
                             </td>
                         </tr>
@@ -43,7 +43,6 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">Tambah Data Mata Pelajaran</h4>
             </div>
             <div class="modal-body">
@@ -70,7 +69,6 @@
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="myModalLabel">Tambah Data Mata Pelajaran</h4>
                 </div>
                 <div class="modal-body">

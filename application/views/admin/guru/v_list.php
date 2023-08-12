@@ -12,7 +12,7 @@
                 echo '</div>';
             }
             ?>
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover" id="example">
                 <thead>
                     <tr>
                         <th>No</th>

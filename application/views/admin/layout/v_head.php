@@ -12,28 +12,30 @@
 
     <title><?= $title ?> - MAN 1 Lampung Tengah</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php base_url() ?>template/back-end/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>template/back-end/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>template/back-end/css/style.css" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="<?php base_url() ?>template/back-end/css/metisMenu.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>template/back-end/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Clockpicker -->
+    <link href="<?= base_url() ?>template/back-end/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <!-- asColorpicker -->
+    <link href="<?= base_url() ?>template/back-end/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+    <!-- Material color picker -->
+    <link href="<?= base_url() ?>template/back-end/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+    <!-- Pick date -->
+    <link rel="stylesheet" href="<?= base_url() ?>template/back-end/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="<?= base_url() ?>template/back-end/vendor/pickadate/themes/default.date.css">
 
-    <!-- DataTables CSS -->
-    <link href="<?php base_url() ?>template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- Select Item -->
+    <link rel="stylesheet" href="<?= base_url() ?>template/back-end/vendor/select2/css/select2.min.css">
 
-    <!-- DataTables Responsive CSS -->
-    <link href="<?php base_url() ?>template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="<?php base_url() ?>template/back-end/css/startmin.css" rel="stylesheet">
+    <!-- datepicker -->
+    <link rel="stylesheet" href="<?= base_url() ?>/datepicker/css/datepicker.css">
+    <style>
+        .datepicker {
+            z-index: 1151;
+        }
+    </style>
 
-    <!-- Custom Fonts -->
-    <link href="<?php base_url() ?>template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 </head>

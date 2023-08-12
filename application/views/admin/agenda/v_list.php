@@ -11,9 +11,9 @@
                 echo '</div>';
             }
             ?>
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-bordered table-hover display">
                 <thead>
-                    <tr>
+                    <tr style="color: black;">
                         <th style="width: 25px;">No</th>
                         <th>Nama Agenda</th>
                         <th>Keterangan</th>

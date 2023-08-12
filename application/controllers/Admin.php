@@ -108,7 +108,7 @@ class Admin extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title'         => 'Agenda',
-                'title2'        => 'Edit DAta Agenda',
+                'title2'        => 'Edit Data Agenda',
                 'agenda'    => $this->m_agenda->detail($id_agenda),
                 'isi'           => 'admin/agenda/v_edit'
             );

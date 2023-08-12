@@ -1,7 +1,7 @@
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading text-right">
-            <a href="<?= base_url() ?>pegawai/add" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add</a>
+            <a href="<?= base_url() ?>pegawai/add" type="button" class="btn btn-success" style="margin-bottom: 15px;"><i class="fa fa-plus"></i> Add</a>
         </div>
         <div class="panel-body">
             <?php
@@ -12,7 +12,7 @@
                 echo '</div>';
             }
             ?>
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover" id="example">
                 <thead>
                     <tr>
                         <th>No</th>

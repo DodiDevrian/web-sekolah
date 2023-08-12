@@ -1409,7 +1409,6 @@ section
 	font-family: 'Roboto Slab', serif;
 	font-size: 20px;
 	font-weight: 700;
-	pointer-events: none;
 	line-height: 1.4;
 	color: #384158;
 	-webkit-transition: all 200ms ease;
